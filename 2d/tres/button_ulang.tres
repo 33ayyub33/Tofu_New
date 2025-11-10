@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://b0pshqiid5kjp"]
+
+[ext_resource type="Texture2D" uid="uid://bkfwjp326j1sx" path="res://img/aset/game_2/SOAL/atur_ulang.png" id="1_vaktf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fxcqn"]
+texture = ExtResource("1_vaktf")
+modulate_color = Color(0.894922, 0.894922, 0.894922, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gvtar"]
+texture = ExtResource("1_vaktf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rwvp6"]
+texture = ExtResource("1_vaktf")
+modulate_color = Color(0.593134, 0.593134, 0.593134, 1)
+
+[resource]
+Button/styles/hover = SubResource("StyleBoxTexture_fxcqn")
+Button/styles/normal = SubResource("StyleBoxTexture_gvtar")
+Button/styles/pressed = SubResource("StyleBoxTexture_rwvp6")

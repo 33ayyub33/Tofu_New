@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://cgm0vw5ax5ndf"]
+
+[ext_resource type="Texture2D" uid="uid://dfh6tu16uet1q" path="res://img/aset/game_2/SOAL/ceklis.png" id="1_twr2v"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j25e6"]
+texture = ExtResource("1_twr2v")
+modulate_color = Color(0.912289, 0.912289, 0.912289, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lvy3i"]
+texture = ExtResource("1_twr2v")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e35hf"]
+texture = ExtResource("1_twr2v")
+modulate_color = Color(0.720467, 0.720468, 0.720467, 1)
+
+[resource]
+Button/styles/hover = SubResource("StyleBoxTexture_j25e6")
+Button/styles/normal = SubResource("StyleBoxTexture_lvy3i")
+Button/styles/pressed = SubResource("StyleBoxTexture_e35hf")

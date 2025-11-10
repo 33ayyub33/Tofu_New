@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://c71emnk3r7yp3"]
+
+[ext_resource type="Texture2D" uid="uid://difew8eak2f85" path="res://img/aset/game_2/bg_soal.png" id="1_3l6ug"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q2doc"]
+texture = ExtResource("1_3l6ug")
+modulate_color = Color(0.894922, 0.894922, 0.894922, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3rcsq"]
+texture = ExtResource("1_3l6ug")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sakkb"]
+texture = ExtResource("1_3l6ug")
+modulate_color = Color(0.712129, 0.712129, 0.712129, 1)
+
+[resource]
+Button/styles/hover = SubResource("StyleBoxTexture_q2doc")
+Button/styles/normal = SubResource("StyleBoxTexture_3rcsq")
+Button/styles/pressed = SubResource("StyleBoxTexture_sakkb")

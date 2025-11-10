@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://nfcrl8srqqux"]
+
+[ext_resource type="Texture2D" uid="uid://d16m142y52qmh" path="res://img/aset/game_3/button_back_huruf.png" id="1_84cwr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5n1ru"]
+texture = ExtResource("1_84cwr")
+modulate_color = Color(0.89059, 0.89059, 0.89059, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xcpr3"]
+texture = ExtResource("1_84cwr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_88nuf"]
+texture = ExtResource("1_84cwr")
+modulate_color = Color(0.712129, 0.712129, 0.712129, 1)
+
+[resource]
+Button/styles/hover = SubResource("StyleBoxTexture_5n1ru")
+Button/styles/normal = SubResource("StyleBoxTexture_xcpr3")
+Button/styles/pressed = SubResource("StyleBoxTexture_88nuf")

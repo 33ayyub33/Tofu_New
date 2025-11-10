@@ -1,0 +1,20 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://e6xhwpqmlsde"]
+
+[ext_resource type="Texture2D" uid="uid://dnxot22sh0kwk" path="res://img/aset/tombol_bener.png" id="1_7wbjx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cyoc6"]
+texture = ExtResource("1_7wbjx")
+modulate_color = Color(0.756517, 0.000442803, 0.756512, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7c77i"]
+texture = ExtResource("1_7wbjx")
+modulate_color = Color(0.897857, 0.000648032, 0.897851, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m4iof"]
+texture = ExtResource("1_7wbjx")
+modulate_color = Color(0.642702, 0.000308422, 0.642698, 1)
+
+[resource]
+Button/styles/hover = SubResource("StyleBoxTexture_cyoc6")
+Button/styles/normal = SubResource("StyleBoxTexture_7c77i")
+Button/styles/pressed = SubResource("StyleBoxTexture_m4iof")

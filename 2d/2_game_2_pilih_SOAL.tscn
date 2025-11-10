@@ -1,0 +1,481 @@
+[gd_scene load_steps=24 format=3 uid="uid://b4dvrs0rfx81c"]
+
+[ext_resource type="AudioStream" uid="uid://bl6ld1uxqba1o" path="res://img/aset/music/correct.mp3" id="1_7jrhf"]
+[ext_resource type="Script" path="res://2_game_2_pilih_soal.gd" id="1_ee3qc"]
+[ext_resource type="AudioStream" uid="uid://btw3pxxa6aidt" path="res://img/aset/music/error.mp3" id="2_48o73"]
+[ext_resource type="Texture2D" uid="uid://c1aycl730n8eu" path="res://img/aset/game_2/SOAL/belakang_2.png" id="3_loqck"]
+[ext_resource type="Theme" uid="uid://dg610a6wgjmd8" path="res://img/aset/game_2/tofuw_ngomong_2.tres" id="4_rjj4r"]
+[ext_resource type="Texture2D" uid="uid://j7rskavoih" path="res://img/aset/tanya.png" id="5_57m4l"]
+[ext_resource type="Theme" uid="uid://c71emnk3r7yp3" path="res://tres/2_game_2_pilih_SOAL.tres" id="6_y1hrl"]
+[ext_resource type="Theme" uid="uid://58ycrpgh2pmh" path="res://tres/back.tres" id="7_fhbcq"]
+[ext_resource type="Texture2D" uid="uid://y18y0oi62lg4" path="res://img/aset/game_2/SOAL/I_baca.png" id="7_vlwhp"]
+[ext_resource type="Texture2D" uid="uid://ca6cb8f3rtkpr" path="res://img/aset/game_2/SOAL/I_BELANJA.png" id="8_chvih"]
+[ext_resource type="Texture2D" uid="uid://cxxf16pjlcxf8" path="res://img/aset/game_2/SOAL/I_menjemur.png" id="8_p8v81"]
+[ext_resource type="Texture2D" uid="uid://bbsormc0skd85" path="res://img/aset/game_2/SOAL/I_beljar.png" id="9_4xxcl"]
+[ext_resource type="Texture2D" uid="uid://dfoabcgug5x5b" path="res://img/aset/game_2/SOAL/I_cuci_pring.png" id="10_718v2"]
+[ext_resource type="Texture2D" uid="uid://bp78mkyar6b1w" path="res://img/aset/game_2/SOAL/I_masak.png" id="11_ww6xa"]
+[ext_resource type="Texture2D" uid="uid://cbsto3uo7mmuu" path="res://img/aset/game_2/SOAL/I_memeluk.png" id="12_dqonn"]
+[ext_resource type="Texture2D" uid="uid://b42k1k6ujvh7s" path="res://img/aset/game_2/SOAL/I_sAapu.png" id="13_nm8tk"]
+[ext_resource type="Texture2D" uid="uid://bybx35awbpt37" path="res://img/aset/game_3/gelembung_chat.png" id="15_nwmvr"]
+[ext_resource type="SystemFont" uid="uid://ccndfb05mlrvo" path="res://tres/Font_tombol.tres" id="16_adcph"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_3cf7g"]
+
+[sub_resource type="Animation" id="Animation_j8kbq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_bw2uy"]
+resource_name = "tofuw_ngomong_game2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kqo4d"]
+_data = {
+"RESET": SubResource("Animation_j8kbq"),
+"tofuw_ngomong_game2": SubResource("Animation_bw2uy")
+}
+
+[sub_resource type="SystemFont" id="SystemFont_7lgwh"]
+font_names = PackedStringArray("Pixellari")
+
+[node name="Game_2_Pilih" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ee3qc")
+
+[node name="Correct" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_7jrhf")
+
+[node name="Error" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_48o73")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Background2" type="TextureRect" parent="MarginContainer/VBoxContainer/Control"]
+layout_mode = 2
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("3_loqck")
+expand_mode = 1
+
+[node name="hitam" type="TextureRect" parent="MarginContainer"]
+modulate = Color(0, 0, 0, 0.243137)
+layout_mode = 2
+texture = SubResource("CanvasTexture_3cf7g")
+expand_mode = 1
+
+[node name="reaksi_maskot" type="Control" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Tofuw_Ngomong" type="Control" parent="MarginContainer/reaksi_maskot"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("4_rjj4r")
+
+[node name="Label" type="Label" parent="MarginContainer/reaksi_maskot/Tofuw_Ngomong"]
+visible = false
+layout_mode = 0
+offset_left = 117.0
+offset_top = 281.0
+offset_right = 392.0
+offset_bottom = 351.0
+text = "Haiii Ibu, Silahkan pilih aktivitas mana 
+yang akan dijadikan soal"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MarginContainer/reaksi_maskot/Tofuw_Ngomong"]
+libraries = {
+"": SubResource("AnimationLibrary_kqo4d")
+}
+
+[node name="Tanya" type="Sprite2D" parent="MarginContainer/reaksi_maskot/Tofuw_Ngomong"]
+position = Vector2(107, 542)
+scale = Vector2(0.401852, 0.401852)
+texture = ExtResource("5_57m4l")
+
+[node name="soal" type="Control" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="gambar_soal" type="TextureRect" parent="MarginContainer/soal"]
+layout_mode = 0
+offset_left = 676.0
+offset_top = 210.0
+offset_right = 716.0
+offset_bottom = 250.0
+
+[node name="SOAL_3" type="Button" parent="MarginContainer/soal"]
+layout_mode = 0
+offset_left = 904.0
+offset_top = 174.0
+offset_right = 1061.0
+offset_bottom = 371.0
+theme = ExtResource("6_y1hrl")
+
+[node name="belanjaa" type="TextureRect" parent="MarginContainer/soal/SOAL_3"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 24.0
+offset_right = 170.0
+offset_bottom = 192.0
+texture = ExtResource("8_chvih")
+expand_mode = 1
+
+[node name="Label4" type="Label" parent="MarginContainer/soal/SOAL_3"]
+layout_mode = 0
+offset_left = -81.0
+offset_top = 174.0
+offset_right = 244.0
+offset_bottom = 226.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 11
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = SubResource("SystemFont_7lgwh")
+theme_override_font_sizes/font_size = 23
+text = "BERBELANJA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SOAL_1" type="Button" parent="MarginContainer/soal"]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 174.0
+offset_right = 677.0
+offset_bottom = 371.0
+theme = ExtResource("6_y1hrl")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/soal/SOAL_1"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 32.0
+offset_right = 155.0
+offset_bottom = 186.0
+texture = ExtResource("7_vlwhp")
+expand_mode = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/soal/SOAL_1"]
+layout_mode = 0
+offset_left = -84.0
+offset_top = 170.0
+offset_right = 241.0
+offset_bottom = 222.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 11
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = SubResource("SystemFont_7lgwh")
+theme_override_font_sizes/font_size = 23
+text = "MEMBACA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SOAL_2" type="Button" parent="MarginContainer/soal"]
+layout_mode = 0
+offset_left = 713.0
+offset_top = 172.0
+offset_right = 870.0
+offset_bottom = 369.0
+theme = ExtResource("6_y1hrl")
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/soal/SOAL_2"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 19.0
+offset_right = 172.0
+offset_bottom = 189.0
+texture = ExtResource("8_p8v81")
+expand_mode = 1
+
+[node name="Label3" type="Label" parent="MarginContainer/soal/SOAL_2"]
+layout_mode = 0
+offset_left = -87.0
+offset_top = 176.0
+offset_right = 238.0
+offset_bottom = 228.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 11
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = SubResource("SystemFont_7lgwh")
+theme_override_font_sizes/font_size = 23
+text = "MENJEMUR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SOAL_4" type="Button" parent="MarginContainer/soal"]
+layout_mode = 0
+offset_left = 1093.0
+offset_top = 177.0
+offset_right = 1250.0
+offset_bottom = 374.0
+theme = ExtResource("6_y1hrl")
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/soal/SOAL_4"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 46.0
+offset_right = 154.0
+offset_bottom = 194.0
+texture = ExtResource("9_4xxcl")
+expand_mode = 1
+
+[node name="Label4" type="Label" parent="MarginContainer/soal/SOAL_4"]
+layout_mode = 0
+offset_left = -86.0
+offset_top = 173.0
+offset_right = 239.0
+offset_bottom = 225.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 11
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = SubResource("SystemFont_7lgwh")
+theme_override_font_sizes/font_size = 23
+text = "BELAJAR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SOAL_5" type="Button" parent="MarginContainer/soal"]
+visible = false
+layout_mode = 0
+offset_left = 498.0
+offset_top = 441.0
+offset_right = 655.0
+offset_bottom = 638.0
+theme = ExtResource("6_y1hrl")
+
+[node name="TextureRect5" type="TextureRect" parent="MarginContainer/soal/SOAL_5"]
+layout_mode = 0
+offset_left = -12.0
+offset_top = 17.0
+offset_right = 176.0
+offset_bottom = 205.0
+texture = ExtResource("10_718v2")
+expand_mode = 1
+
+[node name="Label5" type="Label" parent="MarginContainer/soal/SOAL_5"]
+layout_mode = 0
+offset_left = -85.0
+offset_top = 174.0
+offset_right = 240.0
+offset_bottom = 226.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 11
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = SubResource("SystemFont_7lgwh")
+theme_override_font_sizes/font_size = 23
+text = "MENCUCI"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SOAL_6" type="Button" parent="MarginContainer/soal"]
+visible = false
+layout_mode = 0
+offset_left = 688.0
+offset_top = 441.0
+offset_right = 845.0
+offset_bottom = 638.0
+theme = ExtResource("6_y1hrl")
+
+[node name="TextureRect6" type="TextureRect" parent="MarginContainer/soal/SOAL_6"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 58.0
+offset_right = 153.0
+offset_bottom = 204.0
+texture = ExtResource("11_ww6xa")
+expand_mode = 1
+
+[node name="Label6" type="Label" parent="MarginContainer/soal/SOAL_6"]
+layout_mode = 0
+offset_left = -84.0
+offset_top = 175.0
+offset_right = 241.0
+offset_bottom = 227.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 11
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = SubResource("SystemFont_7lgwh")
+theme_override_font_sizes/font_size = 23
+text = "MEMASAK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SOAL_7" type="Button" parent="MarginContainer/soal"]
+visible = false
+layout_mode = 0
+offset_left = 881.0
+offset_top = 437.0
+offset_right = 1038.0
+offset_bottom = 634.0
+theme = ExtResource("6_y1hrl")
+
+[node name="TextureRect7" type="TextureRect" parent="MarginContainer/soal/SOAL_7"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 23.0
+offset_right = 171.0
+offset_bottom = 195.0
+texture = ExtResource("12_dqonn")
+expand_mode = 1
+
+[node name="Label7" type="Label" parent="MarginContainer/soal/SOAL_7"]
+layout_mode = 0
+offset_left = -80.0
+offset_top = 176.0
+offset_right = 245.0
+offset_bottom = 228.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 11
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = SubResource("SystemFont_7lgwh")
+theme_override_font_sizes/font_size = 23
+text = "MEMELUK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SOAL_8" type="Button" parent="MarginContainer/soal"]
+visible = false
+layout_mode = 0
+offset_left = 1066.0
+offset_top = 436.0
+offset_right = 1223.0
+offset_bottom = 633.0
+theme = ExtResource("6_y1hrl")
+
+[node name="TextureRect8" type="TextureRect" parent="MarginContainer/soal/SOAL_8"]
+layout_mode = 0
+offset_left = -9.0
+offset_top = 25.0
+offset_right = 163.0
+offset_bottom = 197.0
+texture = ExtResource("13_nm8tk")
+expand_mode = 1
+
+[node name="Label8" type="Label" parent="MarginContainer/soal/SOAL_8"]
+layout_mode = 0
+offset_left = -80.0
+offset_top = 177.0
+offset_right = 245.0
+offset_bottom = 229.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 11
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = SubResource("SystemFont_7lgwh")
+theme_override_font_sizes/font_size = 23
+text = "MENYAPU"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/soal"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 27.0
+offset_right = 720.0
+offset_bottom = 110.0
+theme_override_fonts/font = ExtResource("16_adcph")
+theme_override_font_sizes/font_size = 82
+text = "PILIH GAMBAR"
+
+[node name="gelembung)_chat" type="TextureRect" parent="MarginContainer/soal"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 210.0
+offset_right = 485.0
+offset_bottom = 367.0
+texture = ExtResource("15_nwmvr")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MarginContainer/soal/gelembung)_chat"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 25.0
+offset_right = 376.0
+offset_bottom = 127.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("16_adcph")
+theme_override_font_sizes/font_size = 29
+text = "Haii Ibu, silahkan pilih 
+gambar mana yang akan 
+dijadikan soal"
+horizontal_alignment = 1
+
+[node name="jawab" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Tombol_Keluar" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Keluar2_1" type="Button" parent="Tombol_Keluar"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 7.0
+offset_right = 138.0
+offset_bottom = 111.0
+theme = ExtResource("7_fhbcq")
+
+[connection signal="pressed" from="MarginContainer/soal/SOAL_3" to="." method="_on_soal_3_pressed"]
+[connection signal="pressed" from="MarginContainer/soal/SOAL_1" to="." method="_on_soal_1_pressed"]
+[connection signal="pressed" from="MarginContainer/soal/SOAL_2" to="." method="_on_soal_2_pressed"]
+[connection signal="pressed" from="MarginContainer/soal/SOAL_4" to="." method="_on_soal_4_pressed"]
+[connection signal="pressed" from="MarginContainer/soal/SOAL_5" to="." method="_on_soal_5_pressed"]
+[connection signal="pressed" from="MarginContainer/soal/SOAL_6" to="." method="_on_soal_6_pressed"]
+[connection signal="pressed" from="MarginContainer/soal/SOAL_7" to="." method="_on_soal_7_pressed"]
+[connection signal="pressed" from="MarginContainer/soal/SOAL_8" to="." method="_on_soal_8_pressed"]
+[connection signal="pressed" from="Tombol_Keluar/Keluar2_1" to="." method="_on_keluar_2_1_pressed"]

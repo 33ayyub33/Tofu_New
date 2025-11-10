@@ -1,0 +1,414 @@
+[gd_scene load_steps=34 format=3 uid="uid://b0bvqc8xl4kpi"]
+
+[ext_resource type="Script" path="res://game_2_baru.gd" id="1_s5m4b"]
+[ext_resource type="AudioStream" uid="uid://bl6ld1uxqba1o" path="res://img/aset/music/correct.mp3" id="2_7rovj"]
+[ext_resource type="AudioStream" uid="uid://btw3pxxa6aidt" path="res://img/aset/music/error.mp3" id="3_8usa8"]
+[ext_resource type="Texture2D" uid="uid://gfi54pyl1djo" path="res://img/aset/game_2/SOAL/belakang_soal_jawab.png" id="4_4mq2q"]
+[ext_resource type="Theme" uid="uid://dg610a6wgjmd8" path="res://img/aset/game_2/tofuw_ngomong_2.tres" id="5_fx2fv"]
+[ext_resource type="Script" path="res://tofuw_ngomong_baru.gd" id="6_65les"]
+[ext_resource type="Theme" uid="uid://c71emnk3r7yp3" path="res://tres/2_game_2_pilih_SOAL.tres" id="8_683fd"]
+[ext_resource type="Texture2D" uid="uid://j7rskavoih" path="res://img/aset/tanya.png" id="9_dkw4y"]
+[ext_resource type="Texture2D" uid="uid://y18y0oi62lg4" path="res://img/aset/game_2/SOAL/I_baca.png" id="9_k83bi"]
+[ext_resource type="Texture2D" uid="uid://1s01j83i6aym" path="res://img/aset/game_2/kesempatan.png" id="12_7l228"]
+[ext_resource type="Texture2D" uid="uid://oo36h1yviw0v" path="res://img/aset/game_2/tombol_perkata.png" id="12_m0rbs"]
+[ext_resource type="Texture2D" uid="uid://dfh6tu16uet1q" path="res://img/aset/game_2/SOAL/ceklis.png" id="16_axog8"]
+[ext_resource type="Theme" uid="uid://b0pshqiid5kjp" path="res://tres/button_ulang.tres" id="17_132ws"]
+[ext_resource type="Theme" uid="uid://dtlybntd5igv1" path="res://tres/game_2_per-kata.tres" id="18_f1fe0"]
+[ext_resource type="SystemFont" uid="uid://ccndfb05mlrvo" path="res://tres/Font_tombol.tres" id="19_dwmu3"]
+[ext_resource type="Texture2D" uid="uid://bybx35awbpt37" path="res://img/aset/game_3/gelembung_chat.png" id="19_jyxem"]
+[ext_resource type="Theme" uid="uid://58ycrpgh2pmh" path="res://tres/back.tres" id="20_6ea7w"]
+[ext_resource type="Texture2D" uid="uid://bkfjnasxct5e4" path="res://img/aset/back.png" id="21_0vxa7"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_3cf7g"]
+
+[sub_resource type="Animation" id="Animation_j8kbq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_bw2uy"]
+resource_name = "tofuw_ngomong_game2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kqo4d"]
+_data = {
+"RESET": SubResource("Animation_j8kbq"),
+"tofuw_ngomong_game2": SubResource("Animation_bw2uy")
+}
+
+[sub_resource type="SystemFont" id="SystemFont_ipd5a"]
+font_names = PackedStringArray("Pixellari")
+
+[sub_resource type="SystemFont" id="SystemFont_cwvtk"]
+font_names = PackedStringArray("Pixellari")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_28tjo"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0wxmn"]
+texture = ExtResource("12_7l228")
+
+[sub_resource type="Theme" id="Theme_hyxct"]
+Label/styles/normal = SubResource("StyleBoxTexture_0wxmn")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ie8ws"]
+texture = ExtResource("12_m0rbs")
+modulate_color = Color(1, 0.933333, 0.34902, 1)
+
+[sub_resource type="Theme" id="Theme_l4w8p"]
+Label/styles/normal = SubResource("StyleBoxTexture_ie8ws")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j25e6"]
+texture = ExtResource("16_axog8")
+modulate_color = Color(0.912289, 0.912289, 0.912289, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lvy3i"]
+texture = ExtResource("16_axog8")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e35hf"]
+texture = ExtResource("16_axog8")
+modulate_color = Color(0.720467, 0.720468, 0.720467, 1)
+
+[sub_resource type="Theme" id="Theme_vymfn"]
+Button/styles/hover = SubResource("StyleBoxTexture_j25e6")
+Button/styles/normal = SubResource("StyleBoxTexture_lvy3i")
+Button/styles/pressed = SubResource("StyleBoxTexture_e35hf")
+
+[node name="Game_2_BARU" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s5m4b")
+
+[node name="Correct" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_7rovj")
+
+[node name="Error" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_8usa8")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Background2" type="TextureRect" parent="MarginContainer/VBoxContainer/Control"]
+layout_mode = 2
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("4_4mq2q")
+expand_mode = 1
+
+[node name="hitam" type="TextureRect" parent="MarginContainer"]
+modulate = Color(0, 0, 0, 0.317647)
+layout_mode = 2
+texture = SubResource("CanvasTexture_3cf7g")
+expand_mode = 1
+
+[node name="triangle" type="TextureRect" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+texture = SubResource("CanvasTexture_3cf7g")
+expand_mode = 1
+
+[node name="reaksi_maskot" type="Control" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Tofuw_Ngomong" type="Control" parent="MarginContainer/reaksi_maskot"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("5_fx2fv")
+script = ExtResource("6_65les")
+
+[node name="Label" type="Label" parent="MarginContainer/reaksi_maskot/Tofuw_Ngomong"]
+visible = false
+layout_mode = 0
+offset_left = 79.0
+offset_top = 272.0
+offset_right = 369.0
+offset_bottom = 350.0
+theme_override_font_sizes/font_size = 22
+text = "Apa yang sedang dilakukan ibu?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MarginContainer/reaksi_maskot/Tofuw_Ngomong"]
+libraries = {
+"": SubResource("AnimationLibrary_kqo4d")
+}
+
+[node name="Tanya" type="Sprite2D" parent="MarginContainer/reaksi_maskot/Tofuw_Ngomong"]
+position = Vector2(122, 566)
+scale = Vector2(0.372222, 0.372222)
+texture = ExtResource("9_dkw4y")
+
+[node name="soal" type="Control" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="SOAL_1" type="Button" parent="MarginContainer/soal"]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 49.0
+offset_right = 757.0
+offset_bottom = 332.0
+theme = ExtResource("8_683fd")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/soal/SOAL_1"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 32.0
+offset_right = 246.0
+offset_bottom = 260.0
+texture = ExtResource("9_k83bi")
+expand_mode = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/soal/SOAL_1"]
+visible = false
+layout_mode = 0
+offset_left = -84.0
+offset_top = 170.0
+offset_right = 241.0
+offset_bottom = 222.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 11
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = SubResource("SystemFont_ipd5a")
+theme_override_font_sizes/font_size = 23
+text = "MEMBACA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/soal"]
+visible = false
+layout_mode = 0
+offset_left = 1020.0
+offset_top = 19.0
+offset_right = 1563.0
+offset_bottom = 102.0
+theme_override_fonts/font = SubResource("SystemFont_cwvtk")
+theme_override_font_sizes/font_size = 55
+text = "MEMBACA"
+
+[node name="jawab" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="jawab"]
+visible = false
+layout_mode = 0
+offset_left = 368.0
+offset_top = 466.0
+offset_right = 408.0
+offset_bottom = 506.0
+texture = SubResource("CanvasTexture_28tjo")
+
+[node name="A" type="Button" parent="jawab"]
+layout_mode = 0
+offset_left = 431.0
+offset_top = 548.0
+offset_right = 545.0
+offset_bottom = 586.0
+theme = ExtResource("18_f1fe0")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_dwmu3")
+theme_override_font_sizes/font_size = 30
+text = "Adalah"
+
+[node name="B" type="Button" parent="jawab"]
+layout_mode = 0
+offset_left = 429.0
+offset_top = 644.0
+offset_right = 543.0
+offset_bottom = 682.0
+theme = ExtResource("18_f1fe0")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_dwmu3")
+theme_override_font_sizes/font_size = 30
+text = "Bdalah"
+
+[node name="C" type="Button" parent="jawab"]
+layout_mode = 0
+offset_left = 703.0
+offset_top = 548.0
+offset_right = 817.0
+offset_bottom = 586.0
+theme = ExtResource("18_f1fe0")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_dwmu3")
+theme_override_font_sizes/font_size = 30
+text = "Cdalah"
+
+[node name="D" type="Button" parent="jawab"]
+layout_mode = 0
+offset_left = 704.0
+offset_top = 646.0
+offset_right = 818.0
+offset_bottom = 684.0
+theme = ExtResource("18_f1fe0")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_dwmu3")
+theme_override_font_sizes/font_size = 30
+text = "Dalah"
+
+[node name="FeedbackLabel" type="Label" parent="jawab"]
+layout_mode = 0
+offset_left = 863.0
+offset_top = 310.0
+offset_right = 1184.0
+offset_bottom = 356.0
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("19_dwmu3")
+theme_override_font_sizes/font_size = 33
+text = "Benar Ato Salah"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer_Label" type="Label" parent="jawab"]
+layout_mode = 0
+offset_left = 854.0
+offset_top = 26.0
+offset_right = 1114.0
+offset_bottom = 94.0
+theme = SubResource("Theme_hyxct")
+theme_override_fonts/font = ExtResource("19_dwmu3")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="tumpukan_jawaban_label" type="Label" parent="jawab"]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 365.0
+offset_right = 877.0
+offset_bottom = 518.0
+theme = SubResource("Theme_l4w8p")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_dwmu3")
+theme_override_font_sizes/font_size = 38
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="jawab"]
+
+[node name="Tombol_Keluar" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Keluar2_1" type="Button" parent="Tombol_Keluar"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 7.0
+offset_right = 138.0
+offset_bottom = 111.0
+theme = ExtResource("20_6ea7w")
+
+[node name="TextureRect" type="TextureRect" parent="Tombol_Keluar/Keluar2_1"]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 3.0
+offset_right = 29.0
+offset_bottom = 24.0
+texture = ExtResource("21_0vxa7")
+expand_mode = 1
+
+[node name="ceklis2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1104.0
+offset_top = 561.0
+offset_right = 1240.0
+offset_bottom = 697.0
+theme = SubResource("Theme_vymfn")
+
+[node name="undo" type="Button" parent="."]
+layout_mode = 0
+offset_left = 933.0
+offset_top = 564.0
+offset_right = 1067.0
+offset_bottom = 698.0
+theme = ExtResource("17_132ws")
+
+[node name="gelembung)_chat" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 260.0
+offset_right = 411.0
+offset_bottom = 385.0
+texture = ExtResource("19_jyxem")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="gelembung)_chat"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 24.0
+offset_right = 332.0
+offset_bottom = 126.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_dwmu3")
+theme_override_font_sizes/font_size = 29
+text = "Apa yang sedang
+dilakukan Ibu?"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Tombol_Keluar/Keluar2_1" to="." method="_on_keluar_2_1_pressed"]
+[connection signal="pressed" from="ceklis2" to="." method="_on_ceklis_2_pressed"]
+[connection signal="pressed" from="undo" to="." method="_on_undo_pressed"]

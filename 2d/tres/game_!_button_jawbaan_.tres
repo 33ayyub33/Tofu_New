@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://cu38iro3s6nra"]
+
+[ext_resource type="Texture2D" uid="uid://cd1gajre8f7mc" path="res://img/aset/game_1/button_angka.png" id="1_wycrf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4udg2"]
+texture = ExtResource("1_wycrf")
+modulate_color = Color(0.817521, 0.817521, 0.817521, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lf57v"]
+texture = ExtResource("1_wycrf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u18lo"]
+texture = ExtResource("1_wycrf")
+modulate_color = Color(0.741384, 0.741385, 0.741384, 1)
+
+[resource]
+Button/styles/hover = SubResource("StyleBoxTexture_4udg2")
+Button/styles/normal = SubResource("StyleBoxTexture_lf57v")
+Button/styles/pressed = SubResource("StyleBoxTexture_u18lo")

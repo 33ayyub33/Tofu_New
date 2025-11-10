@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://dh7f46gqsstdi"]
+
+[ext_resource type="Script" path="res://global.gd" id="1_uu1jp"]
+[ext_resource type="AudioStream" uid="uid://s7pb56q1agp6" path="res://img/aset/music/intro.mp3" id="2_qoo8n"]
+[ext_resource type="AudioStream" uid="uid://csiy0i71ct1y2" path="res://img/aset/music/Fun_Kid.mp3" id="2_wml7o"]
+[ext_resource type="AudioStream" uid="uid://c1v15x65ossel" path="res://img/aset/music/chicken.mp3" id="4_kp1gu"]
+[ext_resource type="AudioStream" uid="uid://dq8pjqg0kjtf3" path="res://img/aset/music/O_Come_All_Ye_Faithful.mp3" id="5_aalna"]
+[ext_resource type="AudioStream" uid="uid://c140dhtehecee" path="res://img/aset/music/funny_gamee_nihh.mp3" id="6_v4jew"]
+
+[node name="Global" type="Node"]
+script = ExtResource("1_uu1jp")
+
+[node name="intro" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_qoo8n")
+parameters/looping = true
+
+[node name="fun_kid" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_wml7o")
+parameters/looping = true
+
+[node name="chicken" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_kp1gu")
+volume_db = 6.0
+parameters/looping = true
+
+[node name="o_come_all" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_aalna")
+parameters/looping = true
+
+[node name="funny_gamee_nihh" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_v4jew")
+volume_db = -3.0
+parameters/looping = true

@@ -1,0 +1,197 @@
+[gd_scene load_steps=12 format=3 uid="uid://cpbttrp7an34x"]
+
+[ext_resource type="Script" path="res://piilih_game.gd" id="1_0ihoq"]
+[ext_resource type="Texture2D" uid="uid://t28v0vxrj18t" path="res://img/bg_men.png" id="1_acu7h"]
+[ext_resource type="Texture2D" uid="uid://bml6arqotet03" path="res://img/aset/PIL_GAME_BG.png" id="2_at0ws"]
+[ext_resource type="Texture2D" uid="uid://bkfjnasxct5e4" path="res://img/aset/back.png" id="4_3y3vd"]
+[ext_resource type="Theme" uid="uid://c4nwasqrcgoaf" path="res://tres/pilihan_game_woo.tres" id="5_5n4bn"]
+[ext_resource type="Texture2D" uid="uid://62yt63by35m5" path="res://img/aset/anak_berhitung.png" id="5_5ooh3"]
+[ext_resource type="Theme" uid="uid://dre5al8ql0o86" path="res://tres/pilihan.tres" id="7_p54b0"]
+[ext_resource type="Texture2D" uid="uid://chgpvm6x80lbb" path="res://img/aset/anak_menulis.png" id="8_j4o74"]
+[ext_resource type="Texture2D" uid="uid://drstl52trj3vw" path="res://img/aset/anak_membaca.png" id="9_h6r8o"]
+[ext_resource type="SystemFont" uid="uid://ccndfb05mlrvo" path="res://tres/Font_tombol.tres" id="10_ie8jd"]
+
+[sub_resource type="SystemFont" id="SystemFont_cq033"]
+font_names = PackedStringArray("Pixellari")
+
+[node name="Piilih_game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0ihoq")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Control"]
+self_modulate = Color(1, 1, 1, 0.541176)
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("2_at0ws")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/Control"]
+visible = false
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_acu7h")
+expand_mode = 1
+
+[node name="Menghitung" type="Button" parent="MarginContainer/VBoxContainer/Control"]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 352.0
+offset_right = 432.0
+offset_bottom = 627.0
+theme = ExtResource("5_5n4bn")
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/Control/Menghitung"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 17.0
+offset_right = 270.0
+offset_bottom = 255.0
+texture = ExtResource("5_5ooh3")
+expand_mode = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/Control/Menghitung"]
+layout_mode = 0
+offset_left = -19.0
+offset_top = 216.0
+offset_right = 306.0
+offset_bottom = 268.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 18
+theme_override_constants/shadow_outline_size = 18
+theme_override_fonts/font = SubResource("SystemFont_cq033")
+theme_override_font_sizes/font_size = 52
+text = "MENGHITUNG"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Keluar" type="Button" parent="MarginContainer/VBoxContainer/Control"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 12.0
+offset_right = 145.0
+offset_bottom = 116.0
+theme = ExtResource("7_p54b0")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Control/Keluar"]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 3.0
+offset_right = 29.0
+offset_bottom = 24.0
+texture = ExtResource("4_3y3vd")
+expand_mode = 1
+
+[node name="Menulis" type="Button" parent="MarginContainer/VBoxContainer/Control"]
+layout_mode = 0
+offset_left = 844.0
+offset_top = 359.0
+offset_right = 1139.0
+offset_bottom = 634.0
+theme = ExtResource("5_5n4bn")
+theme_override_font_sizes/font_size = 30
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/Control/Menulis"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 38.0
+offset_right = 244.0
+offset_bottom = 232.0
+texture = ExtResource("8_j4o74")
+expand_mode = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/Control/Menulis"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 213.0
+offset_right = 264.0
+offset_bottom = 265.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 18
+theme_override_constants/shadow_outline_size = 18
+theme_override_fonts/font = SubResource("SystemFont_cq033")
+theme_override_font_sizes/font_size = 52
+text = "MENULIS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Membaca" type="Button" parent="MarginContainer/VBoxContainer/Control"]
+layout_mode = 0
+offset_left = 497.0
+offset_top = 359.0
+offset_right = 792.0
+offset_bottom = 634.0
+theme = ExtResource("5_5n4bn")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Control/Membaca"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 36.0
+offset_right = 235.0
+offset_bottom = 220.0
+texture = ExtResource("9_h6r8o")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Control/Membaca"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 211.0
+offset_right = 261.0
+offset_bottom = 263.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 18
+theme_override_constants/shadow_outline_size = 18
+theme_override_fonts/font = SubResource("SystemFont_cq033")
+theme_override_font_sizes/font_size = 52
+text = "MEMBACA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/Control"]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 123.0
+offset_right = 866.0
+offset_bottom = 209.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 18
+theme_override_constants/shadow_outline_size = 18
+theme_override_fonts/font = ExtResource("10_ie8jd")
+theme_override_font_sizes/font_size = 85
+text = "PILIH GAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Control/Menghitung" to="." method="_on_menghitung_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Control/Keluar" to="." method="_on_keluar_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Control/Menulis" to="." method="_on_menulis_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Control/Membaca" to="." method="_on_membaca_pressed"]

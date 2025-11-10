@@ -1,0 +1,31 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://dtlybntd5igv1"]
+
+[ext_resource type="Texture2D" uid="uid://oo36h1yviw0v" path="res://img/aset/game_2/tombol_perkata.png" id="1_din4r"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u4tho"]
+texture = ExtResource("1_din4r")
+expand_margin_left = 15.0
+expand_margin_top = 15.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+modulate_color = Color(0.873298, 0.873298, 0.873298, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iip34"]
+texture = ExtResource("1_din4r")
+expand_margin_left = 15.0
+expand_margin_top = 15.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ps3lb"]
+texture = ExtResource("1_din4r")
+expand_margin_left = 15.0
+expand_margin_top = 15.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+modulate_color = Color(0.77084, 0.770839, 0.770839, 1)
+
+[resource]
+Button/styles/hover = SubResource("StyleBoxTexture_u4tho")
+Button/styles/normal = SubResource("StyleBoxTexture_iip34")
+Button/styles/pressed = SubResource("StyleBoxTexture_ps3lb")

@@ -1,0 +1,213 @@
+[gd_scene load_steps=16 format=3 uid="uid://byvvuhfrjwoll"]
+
+[ext_resource type="Script" path="res://win_game_3_soal_1.gd" id="1_8qiqm"]
+[ext_resource type="Texture2D" uid="uid://efg332oymymu" path="res://img/aset/game_1/taman.png" id="2_qcu2e"]
+[ext_resource type="Theme" uid="uid://b0pshqiid5kjp" path="res://tres/button_ulang.tres" id="3_6jd28"]
+[ext_resource type="Texture2D" uid="uid://b870xxn03owdc" path="res://img/aset/game_3/mburi.png" id="4_k3acm"]
+[ext_resource type="Texture2D" uid="uid://jycijmjp7upq" path="res://img/aset/game_3/b.png" id="5_3jx4q"]
+[ext_resource type="Texture2D" uid="uid://t577gjkww703" path="res://img/aset/game_3/back_huruf.png" id="6_3n26x"]
+[ext_resource type="Theme" uid="uid://58ycrpgh2pmh" path="res://tres/back.tres" id="7_e4ar6"]
+[ext_resource type="Texture2D" uid="uid://j7rskavoih" path="res://img/aset/tanya.png" id="8_75se3"]
+[ext_resource type="Texture2D" uid="uid://bybx35awbpt37" path="res://img/aset/game_3/gelembung_chat.png" id="9_r6wg6"]
+[ext_resource type="SystemFont" uid="uid://ccndfb05mlrvo" path="res://tres/Font_tombol.tres" id="10_a0v45"]
+[ext_resource type="Texture2D" uid="uid://ckab6o3pielwx" path="res://img/aset/belakang_pilihan_3.png" id="11_0h5ey"]
+[ext_resource type="Theme" uid="uid://cb21ut3dnxurk" path="res://tres/tombol.tres" id="12_cjmm5"]
+[ext_resource type="Theme" uid="uid://e6xhwpqmlsde" path="res://tres/tombol_menu.tres" id="13_qo0rd"]
+
+[sub_resource type="SystemFont" id="SystemFont_x0fhk"]
+font_names = PackedStringArray("Pixellari")
+
+[sub_resource type="SystemFont" id="SystemFont_leq0j"]
+font_names = PackedStringArray("Pixellari")
+
+[node name="win_game_3_soal_1" type="Node2D"]
+script = ExtResource("1_8qiqm")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="penting" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="baclground" type="TextureRect" parent="MarginContainer/VBoxContainer/penting"]
+self_modulate = Color(1, 1, 1, 0.752941)
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("2_qcu2e")
+expand_mode = 1
+
+[node name="undo" type="Button" parent="MarginContainer/VBoxContainer/penting"]
+visible = false
+layout_mode = 0
+offset_left = 139.0
+offset_top = 438.0
+offset_right = 264.0
+offset_bottom = 469.0
+text = "Hapus ga niee?"
+
+[node name="hapus_garis" type="Button" parent="MarginContainer/VBoxContainer/penting"]
+layout_mode = 0
+offset_left = 1128.0
+offset_top = 23.0
+offset_right = 1246.0
+offset_bottom = 127.0
+theme = ExtResource("3_6jd28")
+text = " "
+
+[node name="papan_jawabn" type="TextureRect" parent="MarginContainer/VBoxContainer/penting"]
+visible = false
+layout_mode = 0
+offset_left = 1143.0
+offset_top = 96.0
+offset_right = 1667.0
+offset_bottom = 620.0
+rotation = 1.57079
+texture = ExtResource("4_k3acm")
+expand_mode = 1
+flip_h = true
+flip_v = true
+
+[node name="SOAL" type="TextureRect" parent="MarginContainer/VBoxContainer/penting/papan_jawabn"]
+visible = false
+layout_mode = 0
+offset_left = 459.0
+offset_top = 60.001
+offset_right = 862.0
+offset_bottom = 463.001
+rotation = 1.57079
+texture = ExtResource("5_3jx4q")
+expand_mode = 1
+flip_h = true
+flip_v = true
+
+[node name="papan_huruf" type="TextureRect" parent="MarginContainer/VBoxContainer/penting"]
+visible = false
+layout_mode = 0
+offset_left = 313.0
+offset_top = -14.0
+offset_right = 618.0
+offset_bottom = 294.0
+texture = ExtResource("6_3n26x")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/penting/papan_huruf"]
+visible = false
+offset_left = 18.0
+offset_top = 125.0
+offset_right = 290.0
+offset_bottom = 184.0
+theme_override_constants/outline_size = 11
+theme_override_fonts/font = SubResource("SystemFont_x0fhk")
+theme_override_font_sizes/font_size = 58
+text = "BUKU"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Node2D" type="Node2D" parent="MarginContainer/VBoxContainer/penting"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="MarginContainer/VBoxContainer/penting/Node2D"]
+
+[node name="Line2D" type="Line2D" parent="MarginContainer/VBoxContainer/penting/Node2D"]
+
+[node name="Keluar2_1" type="Button" parent="."]
+offset_left = 20.0
+offset_top = 7.0
+offset_right = 138.0
+offset_bottom = 111.0
+theme = ExtResource("7_e4ar6")
+
+[node name="Tanya" type="Sprite2D" parent="."]
+position = Vector2(126, 598)
+scale = Vector2(0.403704, 0.403704)
+texture = ExtResource("8_75se3")
+
+[node name="gelembung_chat" type="TextureRect" parent="."]
+visible = false
+offset_left = 233.0
+offset_top = 304.0
+offset_right = 576.0
+offset_bottom = 437.0
+texture = ExtResource("9_r6wg6")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="gelembung_chat"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 18.0
+offset_right = 340.0
+offset_bottom = 120.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_a0v45")
+theme_override_font_sizes/font_size = 25
+text = "Halo dek, Silahkan
+menulis huruf
+sesuai perintah"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 335.0
+offset_top = 159.0
+offset_right = 975.0
+offset_bottom = 583.0
+texture = ExtResource("11_0h5ey")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 58.0
+offset_right = 513.0
+offset_bottom = 109.0
+theme_override_fonts/font = SubResource("SystemFont_leq0j")
+theme_override_font_sizes/font_size = 50
+text = "KAMU BERHASIL"
+
+[node name="kembali" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 236.0
+offset_top = 211.0
+offset_right = 401.0
+offset_bottom = 275.0
+theme = ExtResource("12_cjmm5")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("10_a0v45")
+theme_override_font_sizes/font_size = 29
+text = "KEMBALI"
+
+[node name="Retry" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 140.0
+offset_right = 391.0
+offset_bottom = 204.0
+theme = ExtResource("12_cjmm5")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("10_a0v45")
+theme_override_font_sizes/font_size = 30
+text = "ULANG"
+
+[node name="home\'" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 285.0
+offset_right = 393.0
+offset_bottom = 349.0
+theme = ExtResource("13_qo0rd")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("10_a0v45")
+theme_override_font_sizes/font_size = 28
+text = "MENU"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/penting/hapus_garis" to="." method="_on_hapus_garis_pressed"]
+[connection signal="pressed" from="Keluar2_1" to="." method="_on_keluar_2_1_pressed"]
+[connection signal="pressed" from="TextureRect/kembali" to="." method="_on_kembali_pressed"]
+[connection signal="pressed" from="TextureRect/Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="TextureRect/home\'" to="." method="_on_home_pressed"]

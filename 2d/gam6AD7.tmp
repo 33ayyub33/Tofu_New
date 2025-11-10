@@ -1,0 +1,443 @@
+[gd_scene load_steps=35 format=3 uid="uid://y4t1ruhikych"]
+
+[ext_resource type="Script" path="res://Game1/game_1.gd" id="1_gy2w3"]
+[ext_resource type="Texture2D" uid="uid://bh8fo82ny0dlb" path="res://img/Bahan.png" id="1_hs41g"]
+[ext_resource type="Theme" uid="uid://d7hcglf4qe7r" path="res://UI/Saves/OrangNgomong.tres" id="2_0a05d"]
+[ext_resource type="Texture2D" uid="uid://osvlowfi5c2v" path="res://img/trolli.png" id="2_8l4id"]
+[ext_resource type="Texture2D" uid="uid://bad0corpqvhtm" path="res://icon.svg" id="3_472vf"]
+[ext_resource type="Script" path="res://Game1/orang_ngomong.gd" id="3_eumxa"]
+[ext_resource type="Script" path="res://Game1/object.gd" id="5_jxbf2"]
+[ext_resource type="Texture2D" uid="uid://hqqxhsurt4ar" path="res://img/9.png" id="7_rdpq3"]
+[ext_resource type="Texture2D" uid="uid://dlfrw2pfjs1jw" path="res://img/7.png" id="8_wokn5"]
+[ext_resource type="Texture2D" uid="uid://c06hydo8eh5m6" path="res://img/10.png" id="9_y5afu"]
+[ext_resource type="Texture2D" uid="uid://odp5sta1h7aw" path="res://img/8.png" id="10_5dx6u"]
+[ext_resource type="AudioStream" uid="uid://dr77fqceborv8" path="res://img/Joy To The World - DJ Williams.mp3" id="12_wal3r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ex603"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ambpr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fereo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_epa4x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y6o7r"]
+
+[sub_resource type="Theme" id="Theme_fclye"]
+Button/styles/disabled = SubResource("StyleBoxEmpty_ex603")
+Button/styles/disabled_mirrored = SubResource("StyleBoxEmpty_ambpr")
+Button/styles/focus = SubResource("StyleBoxEmpty_fereo")
+Button/styles/hover = SubResource("StyleBoxEmpty_epa4x")
+Button/styles/hover_mirrored = SubResource("StyleBoxEmpty_y6o7r")
+
+[sub_resource type="Animation" id="Animation_mh74b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_tsxhh"]
+resource_name = "ratio"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u3pa3"]
+_data = {
+"RESET": SubResource("Animation_mh74b"),
+"ratio": SubResource("Animation_tsxhh")
+}
+
+[sub_resource type="Animation" id="Animation_w0nx5"]
+resource_name = "gerak_nanas"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(629, 296), Vector2(138, 386)]
+}
+
+[sub_resource type="Animation" id="Animation_r2iav"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(629, 296)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_12r1c"]
+_data = {
+"RESET": SubResource("Animation_r2iav"),
+"gerak_nanas": SubResource("Animation_w0nx5")
+}
+
+[sub_resource type="Animation" id="Animation_6eqmi"]
+resource_name = "apel_gerak"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(658, 397), Vector2(146, 407)]
+}
+
+[sub_resource type="Animation" id="Animation_idl7b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(658, 397)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dcou6"]
+_data = {
+"RESET": SubResource("Animation_idl7b"),
+"apel_gerak": SubResource("Animation_6eqmi")
+}
+
+[sub_resource type="Animation" id="Animation_gxgka"]
+resource_name = "semangka_gerak"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(452, 388), Vector2(162, 408)]
+}
+
+[sub_resource type="Animation" id="Animation_ruh7q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(452, 388)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6dtk7"]
+_data = {
+"RESET": SubResource("Animation_ruh7q"),
+"semangka_gerak": SubResource("Animation_gxgka")
+}
+
+[sub_resource type="Animation" id="Animation_fofps"]
+resource_name = "jeruk_gerak"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(458, 307), Vector2(171, 404)]
+}
+
+[sub_resource type="Animation" id="Animation_dvrle"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(458, 307)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hsgfy"]
+_data = {
+"RESET": SubResource("Animation_dvrle"),
+"jeruk_gerak": SubResource("Animation_fofps")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_xo6de"]
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Game1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_fclye")
+script = ExtResource("1_gy2w3")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_hs41g")
+expand_mode = 2
+
+[node name="OrangNgomong" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 100.0
+offset_top = -130.0
+offset_right = 276.0
+offset_bottom = 36.0
+grow_vertical = 2
+theme = ExtResource("2_0a05d")
+script = ExtResource("3_eumxa")
+
+[node name="TextureRect" type="TextureRect" parent="OrangNgomong"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_472vf")
+expand_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="OrangNgomong"]
+layout_mode = 0
+offset_left = 211.0
+offset_top = -38.0
+offset_right = 221.0
+offset_bottom = -5.0
+text = "Hallo ingin beli bakso"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="OrangNgomong"]
+libraries = {
+"": SubResource("AnimationLibrary_u3pa3")
+}
+
+[node name="Keranjang" type="Sprite2D" parent="OrangNgomong"]
+position = Vector2(77, 280)
+scale = Vector2(0.361111, 0.361111)
+texture = ExtResource("2_8l4id")
+
+[node name="nanas" type="Sprite2D" parent="OrangNgomong"]
+position = Vector2(629, 296)
+scale = Vector2(0.101852, 0.101852)
+texture = ExtResource("7_rdpq3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="OrangNgomong/nanas"]
+libraries = {
+"": SubResource("AnimationLibrary_12r1c")
+}
+
+[node name="apel" type="Sprite2D" parent="OrangNgomong"]
+position = Vector2(658, 397)
+scale = Vector2(0.0555556, 0.0555555)
+texture = ExtResource("8_wokn5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="OrangNgomong/apel"]
+libraries = {
+"": SubResource("AnimationLibrary_dcou6")
+}
+
+[node name="semangka" type="Sprite2D" parent="OrangNgomong"]
+position = Vector2(452, 388)
+scale = Vector2(0.0666666, 0.0666666)
+texture = ExtResource("9_y5afu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="OrangNgomong/semangka"]
+libraries = {
+"": SubResource("AnimationLibrary_6dtk7")
+}
+
+[node name="jeruk" type="Sprite2D" parent="OrangNgomong"]
+position = Vector2(458, 307)
+scale = Vector2(0.0666667, 0.0666667)
+texture = ExtResource("10_5dx6u")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="OrangNgomong/jeruk"]
+libraries = {
+"": SubResource("AnimationLibrary_hsgfy")
+}
+
+[node name="Object" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_jxbf2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Object"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -136.0
+offset_top = 40.0
+offset_right = -34.0
+offset_bottom = 144.0
+grow_horizontal = 0
+
+[node name="Nanas" type="Label" parent="Object/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "nanas : 0"
+label_settings = SubResource("LabelSettings_xo6de")
+
+[node name="Semangka" type="Label" parent="Object/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Semangka : 0"
+label_settings = SubResource("LabelSettings_xo6de")
+
+[node name="Apel" type="Label" parent="Object/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Apel : 0"
+label_settings = SubResource("LabelSettings_xo6de")
+
+[node name="Jeruk" type="Label" parent="Object/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Jeruk : 0"
+label_settings = SubResource("LabelSettings_xo6de")
+
+[node name="ClickableObject" type="Control" parent="Object"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Jeruk" type="Button" parent="Object/ClickableObject"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 346.0
+offset_top = 246.0
+offset_right = 537.0
+offset_bottom = 331.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Semangka" type="Button" parent="Object/ClickableObject"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 333.0
+offset_top = 338.0
+offset_right = 527.0
+offset_bottom = 407.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Apel" type="Button" parent="Object/ClickableObject"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 541.0
+offset_top = 337.0
+offset_right = 730.0
+offset_bottom = 406.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Nanas" type="Button" parent="Object/ClickableObject"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 540.0
+offset_top = 244.0
+offset_right = 729.0
+offset_bottom = 330.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="buah" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Node2D" type="Node2D" parent="buah"]
+
+[node name="JoyToTheWorld-DjWilliams" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_wal3r")
+volume_db = -10.0
+autoplay = true
+
+[connection signal="pressed" from="Object/ClickableObject/Jeruk" to="Object" method="_on_jeruk_pressed"]
+[connection signal="pressed" from="Object/ClickableObject/Semangka" to="Object" method="_on_semangka_pressed"]
+[connection signal="pressed" from="Object/ClickableObject/Apel" to="Object" method="_on_apel_pressed"]
+[connection signal="pressed" from="Object/ClickableObject/Nanas" to="Object" method="_on_nanas_pressed"]

@@ -1,0 +1,25 @@
+extends Control
+
+@onready var label = $Label
+@onready var anim_show = $AnimationPlayer
+var ngomong1 = "Mas tolong ambilkan "
+var angka1 = "satu"
+var angka2 = "dua"
+var angka3 = "tiga"
+var angka4 = "empat"
+var angka5 = "lima"
+var angka6 = "enam"
+var angka7 = "tujuh"
+var angka8 = "delapan"
+var angka9 = "sembilan"
+var angka10 = "sepuluh"
+func _ready():
+	label.text = str(ngomong1+angka1)
+	_show_text()
+	
+
+func _show_text():
+	anim_show.play("ratio")
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+

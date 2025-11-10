@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3ufc8s5n4g85"]
+
+[ext_resource type="Texture2D" uid="uid://bad0corpqvhtm" path="res://icon.svg" id="1_d2xxl"]
+[ext_resource type="Texture2D" uid="uid://bh8fo82ny0dlb" path="res://img/Bahan.png" id="1_x13c6"]
+[ext_resource type="AudioStream" uid="uid://dr77fqceborv8" path="res://img/Joy To The World - DJ Williams.mp3" id="3_ttglq"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Bg" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_x13c6")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Icon" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.742188, 0.742188)
+texture = ExtResource("1_d2xxl")
+
+[node name="JoyToTheWorld-DjWilliams" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ttglq")
+volume_db = -10.0
+autoplay = true

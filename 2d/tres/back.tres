@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://58ycrpgh2pmh"]
+
+[ext_resource type="Texture2D" uid="uid://byckm5duk37lc" path="res://img/aset/kembali_2.png" id="1_opfh7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aukph"]
+texture = ExtResource("1_opfh7")
+modulate_color = Color(0.800491, 0.800491, 0.800491, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8wgmu"]
+texture = ExtResource("1_opfh7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b11gs"]
+texture = ExtResource("1_opfh7")
+modulate_color = Color(0.544974, 0.544974, 0.544974, 1)
+
+[resource]
+Button/styles/hover = SubResource("StyleBoxTexture_aukph")
+Button/styles/normal = SubResource("StyleBoxTexture_8wgmu")
+Button/styles/pressed = SubResource("StyleBoxTexture_b11gs")

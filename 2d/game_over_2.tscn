@@ -1,0 +1,278 @@
+[gd_scene load_steps=23 format=3 uid="uid://b6f5b35mhdj7n"]
+
+[ext_resource type="Script" path="res://game_over_2.gd" id="1_775g4"]
+[ext_resource type="Texture2D" uid="uid://gfi54pyl1djo" path="res://img/aset/game_2/SOAL/belakang_soal_jawab.png" id="2_df84t"]
+[ext_resource type="Theme" uid="uid://dg610a6wgjmd8" path="res://img/aset/game_2/tofuw_ngomong_2.tres" id="3_qpl8x"]
+[ext_resource type="Texture2D" uid="uid://deaakdnln8f4d" path="res://img/aset/benar.png" id="4_xlxnu"]
+[ext_resource type="Texture2D" uid="uid://bx5m6iugmyv7t" path="res://img/aset/coba_lagi.png" id="5_4i551"]
+[ext_resource type="Texture2D" uid="uid://j7rskavoih" path="res://img/aset/tanya.png" id="6_ir4vs"]
+[ext_resource type="Texture2D" uid="uid://difew8eak2f85" path="res://img/aset/game_2/bg_soal.png" id="7_mx54x"]
+[ext_resource type="Texture2D" uid="uid://rhswvp3ls60y" path="res://img/aset/setting.png" id="8_tmslx"]
+[ext_resource type="Texture2D" uid="uid://ckab6o3pielwx" path="res://img/aset/belakang_pilihan_3.png" id="9_glyh6"]
+[ext_resource type="Theme" uid="uid://cb21ut3dnxurk" path="res://tres/tombol.tres" id="10_yqs8x"]
+[ext_resource type="SystemFont" uid="uid://ccndfb05mlrvo" path="res://tres/Font_tombol.tres" id="11_yg17p"]
+[ext_resource type="Theme" uid="uid://e6xhwpqmlsde" path="res://tres/tombol_menu.tres" id="12_l88d4"]
+[ext_resource type="AudioStream" uid="uid://dvn8hpr1ybn2g" path="res://img/aset/music/failfare.mp3" id="13_00r42"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_fqk7r"]
+
+[sub_resource type="Animation" id="Animation_j8kbq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_bw2uy"]
+resource_name = "tofuw_ngomong_game2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kqo4d"]
+_data = {
+"RESET": SubResource("Animation_j8kbq"),
+"tofuw_ngomong_game2": SubResource("Animation_bw2uy")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jjwgy"]
+bg_color = Color(0.241895, 0.356492, 0.48954, 1)
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmgu7"]
+bg_color = Color(0.369507, 0.50858, 0.674106, 1)
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_15qi5"]
+bg_color = Color(0.243137, 0.356863, 0.490196, 1)
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+
+[sub_resource type="Theme" id="Theme_h3f27"]
+Button/styles/hover = SubResource("StyleBoxFlat_jjwgy")
+Button/styles/normal = SubResource("StyleBoxFlat_gmgu7")
+Button/styles/pressed = SubResource("StyleBoxFlat_15qi5")
+
+[sub_resource type="SystemFont" id="SystemFont_thd44"]
+font_names = PackedStringArray("Pixellari")
+
+[node name="game_over2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_775g4")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Background2" type="TextureRect" parent="MarginContainer/VBoxContainer/Control"]
+layout_mode = 2
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("2_df84t")
+expand_mode = 1
+
+[node name="triangle" type="TextureRect" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+texture = SubResource("CanvasTexture_fqk7r")
+expand_mode = 1
+
+[node name="reaksi_maskot" type="Control" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Tofuw_Ngomong" type="Control" parent="MarginContainer/reaksi_maskot"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("3_qpl8x")
+
+[node name="Label" type="Label" parent="MarginContainer/reaksi_maskot/Tofuw_Ngomong"]
+visible = false
+layout_mode = 0
+offset_left = 226.0
+offset_top = 337.0
+offset_right = 284.0
+offset_bottom = 394.0
+text = "Sedang Apa Dia Lakukan?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MarginContainer/reaksi_maskot/Tofuw_Ngomong"]
+libraries = {
+"": SubResource("AnimationLibrary_kqo4d")
+}
+
+[node name="maskot" type="Sprite2D" parent="MarginContainer/reaksi_maskot/Tofuw_Ngomong"]
+visible = false
+
+[node name="Benar" type="Sprite2D" parent="MarginContainer/reaksi_maskot/Tofuw_Ngomong/maskot"]
+visible = false
+position = Vector2(187, 369)
+scale = Vector2(0.224074, 0.224074)
+texture = ExtResource("4_xlxnu")
+
+[node name="CobaLagi" type="Sprite2D" parent="MarginContainer/reaksi_maskot/Tofuw_Ngomong/maskot"]
+visible = false
+position = Vector2(189, 389)
+scale = Vector2(0.233333, 0.233333)
+texture = ExtResource("5_4i551")
+
+[node name="Tanya" type="Sprite2D" parent="MarginContainer/reaksi_maskot/Tofuw_Ngomong"]
+position = Vector2(174, 552)
+scale = Vector2(0.398148, 0.398148)
+texture = ExtResource("6_ir4vs")
+
+[node name="Tanya2" type="Sprite2D" parent="MarginContainer/reaksi_maskot/Tofuw_Ngomong"]
+position = Vector2(1138, 590)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("5_4i551")
+flip_h = true
+
+[node name="soal" type="Control" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="gambar_soal" type="TextureRect" parent="MarginContainer/soal"]
+layout_mode = 0
+offset_left = 676.0
+offset_top = 210.0
+offset_right = 716.0
+offset_bottom = 250.0
+
+[node name="BgSoal2" type="TextureRect" parent="MarginContainer/soal"]
+visible = false
+layout_mode = 0
+offset_left = 492.0
+offset_top = 30.0
+offset_right = 1572.0
+offset_bottom = 1110.0
+scale = Vector2(0.374074, 0.374074)
+texture = ExtResource("7_mx54x")
+
+[node name="Control" type="Control" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Keluar" type="Button" parent="MarginContainer/Control"]
+visible = false
+layout_mode = 0
+offset_left = 1.0
+offset_top = 5.0
+offset_right = 39.0
+offset_bottom = 35.0
+theme = SubResource("Theme_h3f27")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Control/Keluar"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 3.0
+offset_right = 29.0
+offset_bottom = 24.0
+texture = ExtResource("8_tmslx")
+expand_mode = 1
+
+[node name="hitam" type="TextureRect" parent="MarginContainer/Control"]
+modulate = Color(0, 0, 0, 0.521569)
+layout_mode = 2
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = SubResource("CanvasTexture_fqk7r")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Control"]
+layout_mode = 0
+offset_left = 335.0
+offset_top = 159.0
+offset_right = 975.0
+offset_bottom = 583.0
+texture = ExtResource("9_glyh6")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MarginContainer/Control/TextureRect"]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 57.0
+offset_right = 455.0
+offset_bottom = 108.0
+theme_override_fonts/font = SubResource("SystemFont_thd44")
+theme_override_font_sizes/font_size = 50
+text = "GAME OVER"
+
+[node name="kembali" type="Button" parent="MarginContainer/Control/TextureRect"]
+layout_mode = 0
+offset_left = 236.0
+offset_top = 211.0
+offset_right = 401.0
+offset_bottom = 275.0
+theme = ExtResource("10_yqs8x")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("11_yg17p")
+theme_override_font_sizes/font_size = 29
+text = "KEMBALI"
+
+[node name="Retry" type="Button" parent="MarginContainer/Control/TextureRect"]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 140.0
+offset_right = 391.0
+offset_bottom = 204.0
+theme = ExtResource("10_yqs8x")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("11_yg17p")
+theme_override_font_sizes/font_size = 30
+text = "ULANG"
+
+[node name="home\'" type="Button" parent="MarginContainer/Control/TextureRect"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 285.0
+offset_right = 393.0
+offset_bottom = 349.0
+theme = ExtResource("12_l88d4")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("11_yg17p")
+theme_override_font_sizes/font_size = 28
+text = "MENU"
+
+[node name="Failfare" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_00r42")
+autoplay = true
+
+[connection signal="pressed" from="MarginContainer/Control/TextureRect/kembali" to="." method="_on_kembali_pressed"]
+[connection signal="pressed" from="MarginContainer/Control/TextureRect/Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="MarginContainer/Control/TextureRect/home\'" to="." method="_on_home_pressed"]

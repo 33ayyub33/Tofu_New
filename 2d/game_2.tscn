@@ -1,0 +1,409 @@
+[gd_scene load_steps=28 format=3 uid="uid://b3ccneqm5bkye"]
+
+[ext_resource type="Texture2D" uid="uid://drf08jmjxw7wi" path="res://img/aset/game_2/background_2.png" id="1_4l3gl"]
+[ext_resource type="Script" path="res://game_2.gd" id="1_gpxr3"]
+[ext_resource type="AudioStream" uid="uid://bl6ld1uxqba1o" path="res://img/aset/music/correct.mp3" id="2_56gku"]
+[ext_resource type="Theme" uid="uid://dg610a6wgjmd8" path="res://img/aset/game_2/tofuw_ngomong_2.tres" id="2_nqfr8"]
+[ext_resource type="Script" path="res://tofuw_ngomong.gd" id="3_c17vl"]
+[ext_resource type="Texture2D" uid="uid://deaakdnln8f4d" path="res://img/aset/benar.png" id="3_w25f0"]
+[ext_resource type="AudioStream" uid="uid://btw3pxxa6aidt" path="res://img/aset/music/error.mp3" id="3_yc64q"]
+[ext_resource type="Texture2D" uid="uid://bx5m6iugmyv7t" path="res://img/aset/coba_lagi.png" id="4_3rsve"]
+[ext_resource type="Texture2D" uid="uid://j7rskavoih" path="res://img/aset/tanya.png" id="5_aefl8"]
+[ext_resource type="Texture2D" uid="uid://difew8eak2f85" path="res://img/aset/game_2/bg_soal.png" id="6_8kxm7"]
+[ext_resource type="Texture2D" uid="uid://b6qrn0r4laocl" path="res://img/aset/game_2/baca_buku.png" id="7_q3j2h"]
+[ext_resource type="Texture2D" uid="uid://dly2lofxiilk7" path="res://img/aset/game_2/bli_buku.png" id="8_hp1ig"]
+[ext_resource type="Texture2D" uid="uid://dg0glyxh77o1v" path="res://img/aset/game_2/bli_tofu.png" id="9_kymk4"]
+[ext_resource type="Script" path="res://bg_soal.gd" id="9_qpf1w"]
+[ext_resource type="Texture2D" uid="uid://d1lyobhj66e6q" path="res://img/aset/game_2/num_cucu.png" id="10_sa67o"]
+[ext_resource type="Texture2D" uid="uid://bvqu6o3850xsu" path="res://img/aset/game_2/nyapu.png" id="11_jaglb"]
+[ext_resource type="Texture2D" uid="uid://dngisf20feemt" path="res://img/aset/game_2/apel_mangga.png" id="12_hbrdw"]
+[ext_resource type="Theme" uid="uid://dtlybntd5igv1" path="res://tres/game_2_per-kata.tres" id="18_ldqxe"]
+[ext_resource type="Theme" uid="uid://58ycrpgh2pmh" path="res://tres/back.tres" id="18_sorej"]
+[ext_resource type="Texture2D" uid="uid://bkfjnasxct5e4" path="res://img/aset/back.png" id="19_5nju4"]
+[ext_resource type="SystemFont" uid="uid://ccndfb05mlrvo" path="res://tres/Font_tombol.tres" id="19_8g2wv"]
+[ext_resource type="AudioStream" uid="uid://dq8pjqg0kjtf3" path="res://img/aset/music/O_Come_All_Ye_Faithful.mp3" id="20_iyjki"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_3cf7g"]
+
+[sub_resource type="Animation" id="Animation_j8kbq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_bw2uy"]
+resource_name = "tofuw_ngomong_game2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kqo4d"]
+_data = {
+"RESET": SubResource("Animation_j8kbq"),
+"tofuw_ngomong_game2": SubResource("Animation_bw2uy")
+}
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_28tjo"]
+
+[node name="Game_2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gpxr3")
+
+[node name="Correct" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_56gku")
+
+[node name="Error" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_yc64q")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Background2" type="TextureRect" parent="MarginContainer/VBoxContainer/Control"]
+layout_mode = 2
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_4l3gl")
+expand_mode = 1
+
+[node name="hitam" type="TextureRect" parent="MarginContainer"]
+modulate = Color(0, 0, 0, 0.521569)
+layout_mode = 2
+texture = SubResource("CanvasTexture_3cf7g")
+expand_mode = 1
+
+[node name="triangle" type="TextureRect" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+texture = SubResource("CanvasTexture_3cf7g")
+expand_mode = 1
+
+[node name="reaksi_maskot" type="Control" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Tofuw_Ngomong" type="Control" parent="MarginContainer/reaksi_maskot"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("2_nqfr8")
+script = ExtResource("3_c17vl")
+
+[node name="Label" type="Label" parent="MarginContainer/reaksi_maskot/Tofuw_Ngomong"]
+layout_mode = 0
+offset_left = 226.0
+offset_top = 337.0
+offset_right = 284.0
+offset_bottom = 394.0
+text = "Sedang Apa Dia Lakukan?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MarginContainer/reaksi_maskot/Tofuw_Ngomong"]
+libraries = {
+"": SubResource("AnimationLibrary_kqo4d")
+}
+
+[node name="maskot" type="Sprite2D" parent="MarginContainer/reaksi_maskot/Tofuw_Ngomong"]
+visible = false
+
+[node name="Benar" type="Sprite2D" parent="MarginContainer/reaksi_maskot/Tofuw_Ngomong/maskot"]
+visible = false
+position = Vector2(187, 369)
+scale = Vector2(0.224074, 0.224074)
+texture = ExtResource("3_w25f0")
+
+[node name="CobaLagi" type="Sprite2D" parent="MarginContainer/reaksi_maskot/Tofuw_Ngomong/maskot"]
+visible = false
+position = Vector2(189, 389)
+scale = Vector2(0.233333, 0.233333)
+texture = ExtResource("4_3rsve")
+
+[node name="Tanya" type="Sprite2D" parent="MarginContainer/reaksi_maskot/Tofuw_Ngomong"]
+position = Vector2(135, 444)
+scale = Vector2(0.251852, 0.251852)
+texture = ExtResource("5_aefl8")
+
+[node name="soal" type="Control" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="gambar_soal" type="TextureRect" parent="MarginContainer/soal"]
+layout_mode = 0
+offset_left = 676.0
+offset_top = 210.0
+offset_right = 716.0
+offset_bottom = 250.0
+
+[node name="BgSoal2" type="TextureRect" parent="MarginContainer/soal"]
+layout_mode = 0
+offset_left = 635.0
+offset_top = 33.0
+offset_right = 1715.0
+offset_bottom = 1113.0
+scale = Vector2(0.374074, 0.374074)
+texture = ExtResource("6_8kxm7")
+
+[node name="BgSoal" type="TextureRect" parent="MarginContainer/soal"]
+layout_mode = 0
+offset_left = 715.0
+offset_top = 120.0
+offset_right = 1356.0
+offset_bottom = 761.0
+scale = Vector2(0.374074, 0.374074)
+texture = ExtResource("6_8kxm7")
+expand_mode = 1
+script = ExtResource("9_qpf1w")
+
+[node name="BacaBuku" type="TextureRect" parent="MarginContainer/soal"]
+visible = false
+layout_mode = 0
+offset_left = 1240.0
+offset_top = 328.0
+offset_right = 2320.0
+offset_bottom = 1408.0
+scale = Vector2(0.233333, 0.233333)
+texture = ExtResource("7_q3j2h")
+
+[node name="BliBuku" type="TextureRect" parent="MarginContainer/soal"]
+visible = false
+layout_mode = 0
+offset_left = 1224.0
+offset_top = 283.0
+offset_right = 2304.0
+offset_bottom = 1363.0
+scale = Vector2(0.262963, 0.262963)
+texture = ExtResource("8_hp1ig")
+
+[node name="BliTofu" type="TextureRect" parent="MarginContainer/soal"]
+visible = false
+layout_mode = 0
+offset_left = 1250.0
+offset_top = 344.0
+offset_right = 2330.0
+offset_bottom = 1424.0
+scale = Vector2(0.214815, 0.214815)
+texture = ExtResource("9_kymk4")
+
+[node name="NumCucu" type="TextureRect" parent="MarginContainer/soal"]
+visible = false
+layout_mode = 0
+offset_left = 1233.0
+offset_top = 318.0
+offset_right = 2313.0
+offset_bottom = 1398.0
+scale = Vector2(0.253704, 0.253704)
+texture = ExtResource("10_sa67o")
+
+[node name="Nyapu" type="TextureRect" parent="MarginContainer/soal"]
+visible = false
+layout_mode = 0
+offset_left = 1232.0
+offset_top = 313.0
+offset_right = 2312.0
+offset_bottom = 1393.0
+scale = Vector2(0.231481, 0.231481)
+texture = ExtResource("11_jaglb")
+
+[node name="ApelMangga" type="TextureRect" parent="MarginContainer/soal"]
+visible = false
+layout_mode = 0
+offset_left = 1230.0
+offset_top = 311.0
+offset_right = 2310.0
+offset_bottom = 1391.0
+scale = Vector2(0.237037, 0.237037)
+texture = ExtResource("12_hbrdw")
+
+[node name="jawab" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="jawab"]
+visible = false
+layout_mode = 0
+offset_left = 368.0
+offset_top = 466.0
+offset_right = 408.0
+offset_bottom = 506.0
+texture = SubResource("CanvasTexture_28tjo")
+
+[node name="A" type="Button" parent="jawab"]
+layout_mode = 0
+offset_left = 306.0
+offset_top = 445.0
+offset_right = 368.0
+offset_bottom = 476.0
+theme = ExtResource("18_ldqxe")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_8g2wv")
+theme_override_font_sizes/font_size = 40
+text = "Adalah"
+
+[node name="B" type="Button" parent="jawab"]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 524.0
+offset_right = 432.0
+offset_bottom = 564.0
+theme = ExtResource("18_ldqxe")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_8g2wv")
+theme_override_font_sizes/font_size = 40
+text = "Berapa"
+
+[node name="C" type="Button" parent="jawab"]
+layout_mode = 0
+offset_left = 684.0
+offset_top = 442.0
+offset_right = 862.0
+offset_bottom = 482.0
+theme = ExtResource("18_ldqxe")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_8g2wv")
+theme_override_font_sizes/font_size = 40
+text = "Ciapa Tuh"
+
+[node name="D" type="Button" parent="jawab"]
+layout_mode = 0
+offset_left = 687.0
+offset_top = 528.0
+offset_right = 855.0
+offset_bottom = 568.0
+theme = ExtResource("18_ldqxe")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_8g2wv")
+theme_override_font_sizes/font_size = 40
+text = "Dimanaka"
+
+[node name="FeedbackLabel" type="Label" parent="jawab"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 297.0
+offset_right = 268.0
+offset_bottom = 328.0
+theme_override_fonts/font = ExtResource("19_8g2wv")
+theme_override_font_sizes/font_size = 30
+text = "Benar Ato Salah"
+
+[node name="Timer_Label" type="Label" parent="jawab"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 167.0
+offset_right = 157.0
+offset_bottom = 267.0
+theme_override_fonts/font = ExtResource("19_8g2wv")
+theme_override_font_sizes/font_size = 100
+text = "60"
+
+[node name="BACK" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 306.0
+offset_top = 14.0
+offset_right = 394.0
+offset_bottom = 45.0
+text = "KEMABALI"
+
+[node name="RETRY" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 209.0
+offset_top = 16.0
+offset_right = 273.0
+offset_bottom = 47.0
+text = "ULANG"
+
+[node name="HOME" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 68.0
+offset_top = 15.0
+offset_right = 186.0
+offset_bottom = 46.0
+text = "MENU UTAMA"
+
+[node name="Tombol_Keluar" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Keluar2_1" type="Button" parent="Tombol_Keluar"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 7.0
+offset_right = 138.0
+offset_bottom = 111.0
+theme = ExtResource("18_sorej")
+
+[node name="TextureRect" type="TextureRect" parent="Tombol_Keluar/Keluar2_1"]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 3.0
+offset_right = 29.0
+offset_bottom = 24.0
+texture = ExtResource("19_5nju4")
+expand_mode = 1
+
+[node name="OComeAllYeFaithful" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_iyjki")
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="BACK" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="RETRY" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="HOME" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="Tombol_Keluar/Keluar2_1" to="." method="_on_keluar_2_1_pressed"]

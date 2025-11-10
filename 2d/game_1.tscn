@@ -1,0 +1,1754 @@
+[gd_scene load_steps=76 format=3 uid="uid://y4t1ruhikych"]
+
+[ext_resource type="Script" path="res://Game1/game_1.gd" id="1_gy2w3"]
+[ext_resource type="Theme" uid="uid://d7hcglf4qe7r" path="res://UI/Saves/OrangNgomong.tres" id="2_0a05d"]
+[ext_resource type="Texture2D" uid="uid://osvlowfi5c2v" path="res://img/trolli.png" id="2_8l4id"]
+[ext_resource type="Texture2D" uid="uid://b8e0mbsmilemm" path="res://img/aset/game_1/background.png" id="2_so0ir"]
+[ext_resource type="AudioStream" uid="uid://bl6ld1uxqba1o" path="res://img/aset/music/correct.mp3" id="2_vk5m3"]
+[ext_resource type="Texture2D" uid="uid://bad0corpqvhtm" path="res://icon.svg" id="3_472vf"]
+[ext_resource type="AudioStream" uid="uid://btw3pxxa6aidt" path="res://img/aset/music/error.mp3" id="3_w0d8e"]
+[ext_resource type="Texture2D" uid="uid://iwq1mwgd8jh2" path="res://img/aset/game_1/taman_2.png" id="5_6glxb"]
+[ext_resource type="Script" path="res://Game1/object.gd" id="5_jxbf2"]
+[ext_resource type="Texture2D" uid="uid://dr3h3i7pc3tjo" path="res://img/aset/game_1/42.png" id="6_mieju"]
+[ext_resource type="Texture2D" uid="uid://rhswvp3ls60y" path="res://img/aset/setting.png" id="7_i4s06"]
+[ext_resource type="Texture2D" uid="uid://hqqxhsurt4ar" path="res://img/9.png" id="7_rdpq3"]
+[ext_resource type="Texture2D" uid="uid://bhednp7f1h263" path="res://img/aset/game_1/44.png" id="7_siyi7"]
+[ext_resource type="Texture2D" uid="uid://dlfrw2pfjs1jw" path="res://img/7.png" id="8_wokn5"]
+[ext_resource type="Texture2D" uid="uid://c06hydo8eh5m6" path="res://img/10.png" id="9_y5afu"]
+[ext_resource type="Texture2D" uid="uid://odp5sta1h7aw" path="res://img/8.png" id="10_5dx6u"]
+[ext_resource type="Texture2D" uid="uid://tefc8k2tql1g" path="res://img/aset/game_1/yg_dijual.png" id="15_8v4w5"]
+[ext_resource type="Script" path="res://orang_ngomong_versi_3.gd" id="15_aubgb"]
+[ext_resource type="Theme" uid="uid://dre5al8ql0o86" path="res://tres/pilihan.tres" id="17_sik8m"]
+[ext_resource type="Texture2D" uid="uid://j7rskavoih" path="res://img/aset/tanya.png" id="17_u2hr2"]
+[ext_resource type="Texture2D" uid="uid://bkfjnasxct5e4" path="res://img/aset/back.png" id="18_sqxfw"]
+[ext_resource type="Theme" uid="uid://cu38iro3s6nra" path="res://tres/game_!_button_jawbaan_.tres" id="19_0fn0b"]
+[ext_resource type="SystemFont" uid="uid://ccndfb05mlrvo" path="res://tres/Font_tombol.tres" id="20_rsusj"]
+[ext_resource type="Texture2D" uid="uid://1s01j83i6aym" path="res://img/aset/game_2/kesempatan.png" id="22_u6jwn"]
+[ext_resource type="Texture2D" uid="uid://dh2jk1xjfr8g8" path="res://img/aset/game_1/pertanyaan.png" id="26_xx8d5"]
+[ext_resource type="Theme" uid="uid://bslehmcih0spr" path="res://tres/game_1_tombol_angka_Ibu.tres" id="27_213cq"]
+[ext_resource type="Texture2D" uid="uid://bybx35awbpt37" path="res://img/aset/game_3/gelembung_chat.png" id="28_5dqb7"]
+[ext_resource type="Texture2D" uid="uid://dfh6tu16uet1q" path="res://img/aset/game_2/SOAL/ceklis.png" id="28_8v10r"]
+[ext_resource type="Texture2D" uid="uid://chjrnwitbhk6p" path="res://img/aset/game_3/CROP/gelembung_chat_crop.png" id="28_clkcb"]
+[ext_resource type="Texture2D" uid="uid://qawdkpwvo1ag" path="res://img/aset/game_1/tombolo_ibu_angka.png" id="30_2d7wg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ex603"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ambpr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fereo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_epa4x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y6o7r"]
+
+[sub_resource type="Theme" id="Theme_fclye"]
+Button/styles/disabled = SubResource("StyleBoxEmpty_ex603")
+Button/styles/disabled_mirrored = SubResource("StyleBoxEmpty_ambpr")
+Button/styles/focus = SubResource("StyleBoxEmpty_fereo")
+Button/styles/hover = SubResource("StyleBoxEmpty_epa4x")
+Button/styles/hover_mirrored = SubResource("StyleBoxEmpty_y6o7r")
+
+[sub_resource type="Animation" id="Animation_idl7b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(658, 397)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../semangka:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(459, 407)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../nanas:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(678, 324)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../jeruk:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(458, 307)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../apel2:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(692, 417)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../apel3:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(699, 410)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../apel4:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(668, 418)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../apel5:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(670, 398)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../jeruk2:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(483, 332)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../jeruk3:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(499, 327)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../jeruk4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(470, 339)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../nanas2:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(664, 364)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../nanas3:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(685, 358)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../nanas4:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(658, 357)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../nanas5:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(673, 360)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../semangka2:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(459, 407)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../semangka3:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(459, 407)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../semangka4:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(459, 407)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../semangka5:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(459, 407)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("../jeruk5:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(470, 339)]
+}
+
+[sub_resource type="Animation" id="Animation_6eqmi"]
+resource_name = "apel_gerak"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(658, 397), Vector2(200, 49)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_rua0t"]
+resource_name = "apel_gerak_2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(658, 397), Vector2(165, 60)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath(".:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../apel2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(692, 417), Vector2(125, 48)]
+}
+
+[sub_resource type="Animation" id="Animation_uh6h3"]
+resource_name = "apel_gerak_3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(658, 397), Vector2(72, 155)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath(".:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../apel3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0333333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(699, 410), Vector2(46, 49)]
+}
+
+[sub_resource type="Animation" id="Animation_7g5rp"]
+resource_name = "apel_gerak_4"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(658, 397)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath(".:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../apel4:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0333333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(668, 418), Vector2(46, 154)]
+}
+
+[sub_resource type="Animation" id="Animation_tiv3v"]
+resource_name = "apel_gerak_5"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(658, 397), Vector2(60, 234)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath(".:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../apel5:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0333333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(670, 398), Vector2(123, 152)]
+}
+
+[sub_resource type="Animation" id="Animation_uwxyj"]
+resource_name = "jeruk_gerak"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../jeruk:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(458, 307), Vector2(185, 249)]
+}
+
+[sub_resource type="Animation" id="Animation_of0kw"]
+resource_name = "jeruk_gerak_2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("../jeruk:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(458, 307), Vector2(149, 329)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../jeruk2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(483, 332), Vector2(115, 255)]
+}
+
+[sub_resource type="Animation" id="Animation_n8d3m"]
+resource_name = "jeruk_gerak_3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("../jeruk:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(458, 307), Vector2(62, 422)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../jeruk3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(499, 327), Vector2(51, 300)]
+}
+
+[sub_resource type="Animation" id="Animation_2oaqu"]
+resource_name = "jeruk_gerak_4"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("../jeruk:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(458, 307), Vector2(458, 307)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../jeruk4:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(470, 339), Vector2(57, 362)]
+}
+
+[sub_resource type="Animation" id="Animation_hf4yi"]
+resource_name = "jeruk_gerak_5"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("../jeruk:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(458, 307), Vector2(72, 467)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../jeruk5:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(470, 339), Vector2(58, 369)]
+}
+
+[sub_resource type="Animation" id="Animation_ws7hh"]
+resource_name = "nanas_gerak"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../nanas:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(678, 324), Vector2(55.0001, 486)]
+}
+
+[sub_resource type="Animation" id="Animation_1ahwa"]
+resource_name = "nanas_gerak_2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("../nanas:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(678, 324), Vector2(678, 324)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../nanas2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(664, 364), Vector2(122, 483)]
+}
+
+[sub_resource type="Animation" id="Animation_kpkal"]
+resource_name = "nanas_gerak_3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("../nanas:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(678, 324), Vector2(61.0001, 614)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../nanas3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(685, 358), Vector2(191, 484)]
+}
+
+[sub_resource type="Animation" id="Animation_qw3th"]
+resource_name = "nanas_gerak_4"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("../nanas:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(678, 324), Vector2(169, 575)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../nanas4:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(658, 357), Vector2(46.0001, 628)]
+}
+
+[sub_resource type="Animation" id="Animation_b6mx8"]
+resource_name = "nanas_gerak_5"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("../nanas:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(678, 324), Vector2(175, 617)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../nanas5:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(673, 360), Vector2(118, 624)]
+}
+
+[sub_resource type="Animation" id="Animation_a8u6p"]
+resource_name = "semangka_gerak"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../semangka:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(459, 407), Vector2(206, 155)]
+}
+
+[sub_resource type="Animation" id="Animation_8m5al"]
+resource_name = "semangka_gerak_2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("../semangka:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(459, 407), Vector2(156, 121)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../semangka2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0666667, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(459, 407), Vector2(215, 354)]
+}
+
+[sub_resource type="Animation" id="Animation_jwg6p"]
+resource_name = "semangka_gerak_3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("../semangka:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(459, 407), Vector2(71, 543)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../semangka3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(459, 407), Vector2(210, 628)]
+}
+
+[sub_resource type="Animation" id="Animation_o4eu4"]
+resource_name = "semangka_gerak_4"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("../semangka:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(459, 407), Vector2(150, 314)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../semangka4:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(459, 407), Vector2(222, 430)]
+}
+
+[sub_resource type="Animation" id="Animation_qwtk1"]
+resource_name = "semangka_gerak_5"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("../semangka:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(459, 407), Vector2(158, 495)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../semangka5:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(459, 407), Vector2(211, 680)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dcou6"]
+_data = {
+"RESET": SubResource("Animation_idl7b"),
+"apel_gerak": SubResource("Animation_6eqmi"),
+"apel_gerak_2": SubResource("Animation_rua0t"),
+"apel_gerak_3": SubResource("Animation_uh6h3"),
+"apel_gerak_4": SubResource("Animation_7g5rp"),
+"apel_gerak_5": SubResource("Animation_tiv3v"),
+"jeruk_gerak": SubResource("Animation_uwxyj"),
+"jeruk_gerak_2": SubResource("Animation_of0kw"),
+"jeruk_gerak_3": SubResource("Animation_n8d3m"),
+"jeruk_gerak_4": SubResource("Animation_2oaqu"),
+"jeruk_gerak_5": SubResource("Animation_hf4yi"),
+"nanas_gerak": SubResource("Animation_ws7hh"),
+"nanas_gerak_2": SubResource("Animation_1ahwa"),
+"nanas_gerak_3": SubResource("Animation_kpkal"),
+"nanas_gerak_4": SubResource("Animation_qw3th"),
+"nanas_gerak_5": SubResource("Animation_b6mx8"),
+"semangka_gerak": SubResource("Animation_a8u6p"),
+"semangka_gerak_2": SubResource("Animation_8m5al"),
+"semangka_gerak_3": SubResource("Animation_jwg6p"),
+"semangka_gerak_4": SubResource("Animation_o4eu4"),
+"semangka_gerak_5": SubResource("Animation_qwtk1")
+}
+
+[sub_resource type="Animation" id="Animation_mh74b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_tsxhh"]
+resource_name = "ratio"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u3pa3"]
+_data = {
+"RESET": SubResource("Animation_mh74b"),
+"ratio": SubResource("Animation_tsxhh")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_xo6de"]
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_othk2"]
+bg_color = Color(0.241895, 0.356492, 0.48954, 1)
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bfxr0"]
+bg_color = Color(0.369507, 0.50858, 0.674106, 1)
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ex850"]
+bg_color = Color(0.243137, 0.356863, 0.490196, 1)
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+
+[sub_resource type="Theme" id="Theme_3joe0"]
+Button/styles/hover = SubResource("StyleBoxFlat_othk2")
+Button/styles/normal = SubResource("StyleBoxFlat_bfxr0")
+Button/styles/pressed = SubResource("StyleBoxFlat_ex850")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_flyk6"]
+texture = ExtResource("22_u6jwn")
+
+[sub_resource type="Theme" id="Theme_qb500"]
+Label/styles/normal = SubResource("StyleBoxTexture_flyk6")
+
+[sub_resource type="SystemFont" id="SystemFont_mmvmn"]
+font_names = PackedStringArray("Pixellari")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j25e6"]
+texture = ExtResource("28_8v10r")
+modulate_color = Color(0.912289, 0.912289, 0.912289, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lvy3i"]
+texture = ExtResource("28_8v10r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e35hf"]
+texture = ExtResource("28_8v10r")
+modulate_color = Color(0.720467, 0.720468, 0.720467, 1)
+
+[sub_resource type="Theme" id="Theme_mnewo"]
+Button/styles/hover = SubResource("StyleBoxTexture_j25e6")
+Button/styles/normal = SubResource("StyleBoxTexture_lvy3i")
+Button/styles/pressed = SubResource("StyleBoxTexture_e35hf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_njyoo"]
+texture = ExtResource("28_clkcb")
+expand_margin_left = 12.0
+expand_margin_top = 13.0
+expand_margin_right = 13.0
+expand_margin_bottom = 23.0
+
+[sub_resource type="Theme" id="Theme_ql8p0"]
+Label/styles/normal = SubResource("StyleBoxTexture_njyoo")
+
+[node name="Game1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_fclye")
+script = ExtResource("1_gy2w3")
+
+[node name="Correct" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_vk5m3")
+
+[node name="Error" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_w0d8e")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("2_so0ir")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.639216)
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("5_6glxb")
+expand_mode = 1
+
+[node name="wadah_buah" type="TextureRect" parent="."]
+self_modulate = Color(0.868985, 0.868985, 0.868985, 1)
+layout_mode = 0
+offset_left = -137.0
+offset_top = -632.0
+offset_right = 309.0
+offset_bottom = 1224.0
+texture = ExtResource("30_2d7wg")
+expand_mode = 1
+
+[node name="42" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(107, 715)
+scale = Vector2(0.225926, 0.225926)
+texture = ExtResource("6_mieju")
+
+[node name="45" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1143, 715)
+scale = Vector2(0.225926, 0.225926)
+texture = ExtResource("6_mieju")
+
+[node name="43" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(206, 393)
+scale = Vector2(0.272222, 0.272222)
+texture = ExtResource("7_siyi7")
+
+[node name="44" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(998, 391)
+scale = Vector2(0.301852, 0.301852)
+texture = ExtResource("7_siyi7")
+flip_h = true
+
+[node name="animasi" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="apel" type="Sprite2D" parent="animasi"]
+position = Vector2(658, 397)
+scale = Vector2(0.109259, 0.109259)
+texture = ExtResource("8_wokn5")
+
+[node name="apel2" type="Sprite2D" parent="animasi"]
+position = Vector2(692, 417)
+scale = Vector2(0.109259, 0.109259)
+texture = ExtResource("8_wokn5")
+
+[node name="apel3" type="Sprite2D" parent="animasi"]
+position = Vector2(699, 410)
+scale = Vector2(0.109259, 0.109259)
+texture = ExtResource("8_wokn5")
+
+[node name="apel4" type="Sprite2D" parent="animasi"]
+position = Vector2(668, 418)
+scale = Vector2(0.109259, 0.109259)
+texture = ExtResource("8_wokn5")
+
+[node name="apel5" type="Sprite2D" parent="animasi"]
+position = Vector2(670, 398)
+scale = Vector2(0.109259, 0.109259)
+texture = ExtResource("8_wokn5")
+
+[node name="semangka" type="Sprite2D" parent="animasi"]
+position = Vector2(459, 407)
+scale = Vector2(0.0962963, 0.0962963)
+texture = ExtResource("9_y5afu")
+
+[node name="semangka2" type="Sprite2D" parent="animasi"]
+position = Vector2(459, 407)
+scale = Vector2(0.109259, 0.109259)
+texture = ExtResource("9_y5afu")
+
+[node name="semangka3" type="Sprite2D" parent="animasi"]
+position = Vector2(459, 407)
+scale = Vector2(0.12037, 0.12037)
+texture = ExtResource("9_y5afu")
+
+[node name="semangka4" type="Sprite2D" parent="animasi"]
+position = Vector2(459, 407)
+scale = Vector2(0.12037, 0.12037)
+texture = ExtResource("9_y5afu")
+
+[node name="semangka5" type="Sprite2D" parent="animasi"]
+position = Vector2(459, 407)
+scale = Vector2(0.12037, 0.12037)
+texture = ExtResource("9_y5afu")
+
+[node name="jeruk" type="Sprite2D" parent="animasi"]
+position = Vector2(458, 307)
+scale = Vector2(0.109259, 0.109259)
+texture = ExtResource("10_5dx6u")
+
+[node name="jeruk2" type="Sprite2D" parent="animasi"]
+position = Vector2(483, 332)
+scale = Vector2(0.109259, 0.109259)
+texture = ExtResource("10_5dx6u")
+
+[node name="jeruk3" type="Sprite2D" parent="animasi"]
+position = Vector2(499, 327)
+scale = Vector2(0.109259, 0.109259)
+texture = ExtResource("10_5dx6u")
+
+[node name="jeruk4" type="Sprite2D" parent="animasi"]
+position = Vector2(470, 339)
+scale = Vector2(0.109259, 0.109259)
+texture = ExtResource("10_5dx6u")
+
+[node name="jeruk5" type="Sprite2D" parent="animasi"]
+position = Vector2(470, 339)
+scale = Vector2(0.109259, 0.109259)
+texture = ExtResource("10_5dx6u")
+
+[node name="nanas" type="Sprite2D" parent="animasi"]
+position = Vector2(678, 324)
+scale = Vector2(0.142593, 0.142593)
+texture = ExtResource("7_rdpq3")
+
+[node name="nanas2" type="Sprite2D" parent="animasi"]
+position = Vector2(664, 364)
+scale = Vector2(0.142593, 0.142593)
+texture = ExtResource("7_rdpq3")
+
+[node name="nanas3" type="Sprite2D" parent="animasi"]
+position = Vector2(685, 358)
+scale = Vector2(0.142593, 0.142593)
+texture = ExtResource("7_rdpq3")
+
+[node name="nanas4" type="Sprite2D" parent="animasi"]
+position = Vector2(658, 357)
+scale = Vector2(0.142593, 0.142593)
+texture = ExtResource("7_rdpq3")
+
+[node name="nanas5" type="Sprite2D" parent="animasi"]
+position = Vector2(673, 360)
+scale = Vector2(0.142593, 0.142593)
+texture = ExtResource("7_rdpq3")
+
+[node name="Keranjang" type="Sprite2D" parent="animasi"]
+visible = false
+position = Vector2(203, 598)
+scale = Vector2(0.361111, 0.361111)
+texture = ExtResource("2_8l4id")
+
+[node name="anim" type="Control" parent="animasi"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="buah_anim" type="AnimationPlayer" parent="animasi/anim"]
+root_node = NodePath("../../apel")
+libraries = {
+"": SubResource("AnimationLibrary_dcou6")
+}
+
+[node name="YgDijual" type="Sprite2D" parent="."]
+position = Vector2(490, 261)
+scale = Vector2(0.568518, 0.568519)
+texture = ExtResource("15_8v4w5")
+
+[node name="OrangNgomong" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 100.0
+offset_top = -130.0
+offset_right = 276.0
+offset_bottom = 36.0
+grow_vertical = 2
+theme = ExtResource("2_0a05d")
+script = ExtResource("15_aubgb")
+
+[node name="TextureRect" type="TextureRect" parent="OrangNgomong"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_472vf")
+expand_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="OrangNgomong"]
+visible = false
+layout_mode = 0
+offset_left = 26.0
+offset_top = 248.0
+offset_right = 36.0
+offset_bottom = 281.0
+text = "Hallo ingin beli bakso"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="OrangNgomong"]
+libraries = {
+"": SubResource("AnimationLibrary_u3pa3")
+}
+
+[node name="maskot" type="Sprite2D" parent="OrangNgomong"]
+position = Vector2(1053, 309)
+scale = Vector2(0.368519, 0.368519)
+texture = ExtResource("17_u2hr2")
+flip_h = true
+
+[node name="Object" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_jxbf2")
+
+[node name="fruit" type="Control" parent="Object"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Jeruk" type="Button" parent="Object/fruit"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 355.0
+offset_top = 246.0
+offset_right = 546.0
+offset_bottom = 331.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Semangka" type="Button" parent="Object/fruit"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 336.0
+offset_top = 348.0
+offset_right = 530.0
+offset_bottom = 417.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Apel" type="Button" parent="Object/fruit"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 563.0
+offset_top = 340.0
+offset_right = 787.0
+offset_bottom = 426.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Nanas" type="Button" parent="Object/fruit"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 568.0
+offset_top = 243.0
+offset_right = 757.0
+offset_bottom = 329.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Nanas" type="Label" parent="Object"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+offset_left = 824.0
+offset_top = 40.0
+offset_right = 926.0
+offset_bottom = 63.0
+text = "nanas : 0"
+label_settings = SubResource("LabelSettings_xo6de")
+
+[node name="Semangka" type="Label" parent="Object"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+offset_left = 824.0
+offset_top = 67.0
+offset_right = 926.0
+offset_bottom = 90.0
+text = "Semangka : 0"
+label_settings = SubResource("LabelSettings_xo6de")
+
+[node name="Apel" type="Label" parent="Object"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+offset_left = 824.0
+offset_top = 94.0
+offset_right = 926.0
+offset_bottom = 117.0
+text = "Apel : 0"
+label_settings = SubResource("LabelSettings_xo6de")
+
+[node name="Jeruk" type="Label" parent="Object"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+offset_left = 824.0
+offset_top = 121.0
+offset_right = 926.0
+offset_bottom = 144.0
+text = "Jeruk : 0"
+label_settings = SubResource("LabelSettings_xo6de")
+
+[node name="Total" type="Label" parent="Object"]
+unique_name_in_owner = true
+visible = false
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 833.0
+offset_top = 154.0
+offset_right = 881.0
+offset_bottom = 177.0
+text = "Total  : "
+
+[node name="Control" type="Control" parent="Object"]
+anchors_preset = 0
+offset_left = 15.0
+offset_top = 9.0
+offset_right = 55.0
+offset_bottom = 49.0
+
+[node name="Keluar" type="Button" parent="Object/Control"]
+visible = false
+layout_mode = 0
+offset_left = 1.0
+offset_top = 5.0
+offset_right = 39.0
+offset_bottom = 35.0
+theme = SubResource("Theme_3joe0")
+
+[node name="TextureRect" type="TextureRect" parent="Object/Control/Keluar"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 3.0
+offset_right = 29.0
+offset_bottom = 24.0
+texture = ExtResource("7_i4s06")
+expand_mode = 1
+
+[node name="Keluar2" type="Button" parent="Object/Control"]
+layout_mode = 0
+offset_left = 1133.0
+offset_top = -7.0
+offset_right = 1251.0
+offset_bottom = 97.0
+theme = ExtResource("17_sik8m")
+
+[node name="TextureRect" type="TextureRect" parent="Object/Control/Keluar2"]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 3.0
+offset_right = 29.0
+offset_bottom = 24.0
+texture = ExtResource("18_sqxfw")
+expand_mode = 1
+
+[node name="Total_button" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="pil_a" type="Button" parent="Total_button"]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 484.0
+offset_right = 544.0
+offset_bottom = 573.0
+theme = ExtResource("19_0fn0b")
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("20_rsusj")
+theme_override_font_sizes/font_size = 60
+icon_alignment = 1
+
+[node name="pil_b" type="Button" parent="Total_button"]
+layout_mode = 0
+offset_left = 622.0
+offset_top = 593.0
+offset_right = 826.0
+offset_bottom = 682.0
+theme = ExtResource("19_0fn0b")
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("20_rsusj")
+theme_override_font_sizes/font_size = 60
+
+[node name="pil_c" type="Button" parent="Total_button"]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 589.0
+offset_right = 544.0
+offset_bottom = 678.0
+theme = ExtResource("19_0fn0b")
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("20_rsusj")
+theme_override_font_sizes/font_size = 60
+
+[node name="pil_d" type="Button" parent="Total_button"]
+layout_mode = 0
+offset_left = 619.0
+offset_top = 485.0
+offset_right = 823.0
+offset_bottom = 574.0
+theme = ExtResource("19_0fn0b")
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("20_rsusj")
+theme_override_font_sizes/font_size = 60
+
+[node name="Nyawa" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(326, 44)
+scale = Vector2(0.087037, 0.087037)
+
+[node name="darah" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 831.0
+offset_top = 18.0
+offset_right = 1091.0
+offset_bottom = 86.0
+theme = SubResource("Theme_qb500")
+theme_override_fonts/font = SubResource("SystemFont_mmvmn")
+theme_override_font_sizes/font_size = 29
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="control_Ibu_tanya" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="pop_up_bg_Pertanyaan" type="Sprite2D" parent="control_Ibu_tanya"]
+position = Vector2(639, 367)
+scale = Vector2(0.903973, 0.903973)
+texture = ExtResource("26_xx8d5")
+
+[node name="IBU_SOAL_INPUT" type="Label" parent="control_Ibu_tanya"]
+layout_mode = 0
+offset_left = 475.0
+offset_top = 241.0
+offset_right = 796.0
+offset_bottom = 287.0
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("20_rsusj")
+theme_override_font_sizes/font_size = 33
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Judul" type="Label" parent="control_Ibu_tanya"]
+layout_mode = 0
+offset_left = 473.0
+offset_top = 120.0
+offset_right = 794.0
+offset_bottom = 171.0
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("20_rsusj")
+theme_override_font_sizes/font_size = 50
+text = "Masukan Soal"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TomboloIbuAngka" type="Button" parent="control_Ibu_tanya"]
+layout_mode = 0
+offset_left = 294.0
+offset_top = 352.0
+offset_right = 1422.0
+offset_bottom = 1455.0
+scale = Vector2(0.0740741, 0.0740741)
+theme = ExtResource("27_213cq")
+theme_override_fonts/font = ExtResource("20_rsusj")
+theme_override_font_sizes/font_size = 640
+text = "1"
+icon_alignment = 1
+
+[node name="TomboloIbuAngka2" type="Button" parent="control_Ibu_tanya"]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 352.0
+offset_right = 1512.0
+offset_bottom = 1455.0
+scale = Vector2(0.0740741, 0.0740741)
+theme = ExtResource("27_213cq")
+theme_override_fonts/font = ExtResource("20_rsusj")
+theme_override_font_sizes/font_size = 640
+text = "2"
+icon_alignment = 1
+
+[node name="TomboloIbuAngka3" type="Button" parent="control_Ibu_tanya"]
+layout_mode = 0
+offset_left = 481.0
+offset_top = 352.0
+offset_right = 1609.0
+offset_bottom = 1455.0
+scale = Vector2(0.0740741, 0.0740741)
+theme = ExtResource("27_213cq")
+theme_override_fonts/font = ExtResource("20_rsusj")
+theme_override_font_sizes/font_size = 640
+text = "3"
+icon_alignment = 1
+
+[node name="TomboloIbuAngka4" type="Button" parent="control_Ibu_tanya"]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 350.0
+offset_right = 1704.0
+offset_bottom = 1453.0
+scale = Vector2(0.0740741, 0.0740741)
+theme = ExtResource("27_213cq")
+theme_override_fonts/font = ExtResource("20_rsusj")
+theme_override_font_sizes/font_size = 640
+text = "4"
+icon_alignment = 1
+
+[node name="TomboloIbuAngka5" type="Button" parent="control_Ibu_tanya"]
+layout_mode = 0
+offset_left = 672.0
+offset_top = 349.0
+offset_right = 1800.0
+offset_bottom = 1452.0
+scale = Vector2(0.0740741, 0.0740741)
+theme = ExtResource("27_213cq")
+theme_override_fonts/font = ExtResource("20_rsusj")
+theme_override_font_sizes/font_size = 640
+text = "5"
+icon_alignment = 1
+
+[node name="TomboloIbuAngka6" type="Button" parent="control_Ibu_tanya"]
+layout_mode = 0
+offset_left = 295.0
+offset_top = 447.0
+offset_right = 1423.0
+offset_bottom = 1550.0
+scale = Vector2(0.0740741, 0.0740741)
+theme = ExtResource("27_213cq")
+theme_override_fonts/font = ExtResource("20_rsusj")
+theme_override_font_sizes/font_size = 640
+text = "6"
+icon_alignment = 1
+
+[node name="TomboloIbuAngka7" type="Button" parent="control_Ibu_tanya"]
+layout_mode = 0
+offset_left = 387.0
+offset_top = 447.0
+offset_right = 1515.0
+offset_bottom = 1550.0
+scale = Vector2(0.0740741, 0.0740741)
+theme = ExtResource("27_213cq")
+theme_override_fonts/font = ExtResource("20_rsusj")
+theme_override_font_sizes/font_size = 640
+text = "7"
+icon_alignment = 1
+
+[node name="TomboloIbuAngka8" type="Button" parent="control_Ibu_tanya"]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 451.0
+offset_right = 1612.0
+offset_bottom = 1554.0
+scale = Vector2(0.0740741, 0.0740741)
+theme = ExtResource("27_213cq")
+theme_override_fonts/font = ExtResource("20_rsusj")
+theme_override_font_sizes/font_size = 640
+text = "8"
+icon_alignment = 1
+
+[node name="TomboloIbuAngka9" type="Button" parent="control_Ibu_tanya"]
+layout_mode = 0
+offset_left = 579.0
+offset_top = 451.0
+offset_right = 1707.0
+offset_bottom = 1554.0
+scale = Vector2(0.0740741, 0.0740741)
+theme = ExtResource("27_213cq")
+theme_override_fonts/font = ExtResource("20_rsusj")
+theme_override_font_sizes/font_size = 640
+text = "9"
+icon_alignment = 1
+
+[node name="TomboloIbuAngka0" type="Button" parent="control_Ibu_tanya"]
+layout_mode = 0
+offset_left = 676.0
+offset_top = 449.0
+offset_right = 1804.0
+offset_bottom = 1552.0
+scale = Vector2(0.0740741, 0.0740741)
+theme = ExtResource("27_213cq")
+theme_override_fonts/font = ExtResource("20_rsusj")
+theme_override_font_sizes/font_size = 640
+text = "0"
+icon_alignment = 1
+
+[node name="TomboloIbu_buah1" type="Button" parent="control_Ibu_tanya"]
+layout_mode = 0
+offset_left = 806.0
+offset_top = 351.0
+offset_right = 1934.0
+offset_bottom = 1454.0
+scale = Vector2(0.0740741, 0.0740741)
+theme = ExtResource("27_213cq")
+theme_override_fonts/font = ExtResource("20_rsusj")
+theme_override_font_sizes/font_size = 640
+icon_alignment = 1
+
+[node name="TomboloIbu_buah2" type="Button" parent="control_Ibu_tanya"]
+layout_mode = 0
+offset_left = 905.0
+offset_top = 350.0
+offset_right = 2033.0
+offset_bottom = 1453.0
+scale = Vector2(0.0740741, 0.0740741)
+theme = ExtResource("27_213cq")
+theme_override_fonts/font = ExtResource("20_rsusj")
+theme_override_font_sizes/font_size = 640
+icon_alignment = 1
+
+[node name="TomboloIbu_buah3" type="Button" parent="control_Ibu_tanya"]
+layout_mode = 0
+offset_left = 810.0
+offset_top = 446.0
+offset_right = 1938.0
+offset_bottom = 1549.0
+scale = Vector2(0.0740741, 0.0740741)
+theme = ExtResource("27_213cq")
+theme_override_fonts/font = ExtResource("20_rsusj")
+theme_override_font_sizes/font_size = 640
+icon_alignment = 1
+
+[node name="TomboloIbu_buah4" type="Button" parent="control_Ibu_tanya"]
+layout_mode = 0
+offset_left = 903.0
+offset_top = 445.0
+offset_right = 2031.0
+offset_bottom = 1548.0
+scale = Vector2(0.0740741, 0.0740741)
+theme = ExtResource("27_213cq")
+theme_override_fonts/font = ExtResource("20_rsusj")
+theme_override_font_sizes/font_size = 640
+icon_alignment = 1
+
+[node name="applee" type="Sprite2D" parent="control_Ibu_tanya"]
+position = Vector2(848, 393)
+scale = Vector2(0.0518518, 0.0518518)
+texture = ExtResource("8_wokn5")
+
+[node name="jerukkk" type="Sprite2D" parent="control_Ibu_tanya"]
+position = Vector2(851, 490)
+scale = Vector2(0.0481481, 0.0481481)
+texture = ExtResource("10_5dx6u")
+
+[node name="nanasss" type="Sprite2D" parent="control_Ibu_tanya"]
+position = Vector2(948, 392)
+scale = Vector2(0.0592592, 0.0592593)
+texture = ExtResource("7_rdpq3")
+
+[node name="semangkaa" type="Sprite2D" parent="control_Ibu_tanya"]
+position = Vector2(945, 488)
+rotation = 0.785397
+scale = Vector2(0.0518518, 0.0518518)
+texture = ExtResource("9_y5afu")
+
+[node name="ceklis2" type="Button" parent="control_Ibu_tanya"]
+layout_mode = 0
+offset_left = 968.0
+offset_top = 107.0
+offset_right = 1092.0
+offset_bottom = 231.0
+theme = SubResource("Theme_mnewo")
+
+[node name="Label_gelembung" type="Label" parent="."]
+layout_mode = 0
+offset_left = 844.0
+offset_top = 236.0
+offset_right = 1175.0
+offset_bottom = 338.0
+theme = SubResource("Theme_ql8p0")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("20_rsusj")
+theme_override_font_sizes/font_size = 24
+text = "Apa yang sedang
+dilakukan Ibu?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="gelembung)_chat" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 843.0
+offset_top = 212.0
+offset_right = 1165.0
+offset_bottom = 337.0
+texture = ExtResource("28_5dqb7")
+expand_mode = 1
+flip_h = true
+
+[connection signal="pressed" from="Object/fruit/Jeruk" to="Object" method="_on_jeruk_pressed"]
+[connection signal="pressed" from="Object/fruit/Semangka" to="Object" method="_on_semangka_pressed"]
+[connection signal="pressed" from="Object/fruit/Apel" to="Object" method="_on_apel_pressed"]
+[connection signal="pressed" from="Object/fruit/Nanas" to="Object" method="_on_nanas_pressed"]
+[connection signal="pressed" from="Object/Control/Keluar2" to="Object" method="_on_keluar_2_pressed"]
+[connection signal="pressed" from="control_Ibu_tanya/TomboloIbuAngka" to="OrangNgomong" method="_on_tombolo_ibu_angka_pressed"]
+[connection signal="pressed" from="control_Ibu_tanya/TomboloIbuAngka2" to="OrangNgomong" method="_on_tombolo_ibu_angka_2_pressed"]
+[connection signal="pressed" from="control_Ibu_tanya/TomboloIbuAngka3" to="OrangNgomong" method="_on_tombolo_ibu_angka_3_pressed"]
+[connection signal="pressed" from="control_Ibu_tanya/TomboloIbuAngka4" to="OrangNgomong" method="_on_tombolo_ibu_angka_4_pressed"]
+[connection signal="pressed" from="control_Ibu_tanya/TomboloIbuAngka5" to="OrangNgomong" method="_on_tombolo_ibu_angka_5_pressed"]
+[connection signal="pressed" from="control_Ibu_tanya/TomboloIbuAngka6" to="OrangNgomong" method="_on_tombolo_ibu_angka_6_pressed"]
+[connection signal="pressed" from="control_Ibu_tanya/TomboloIbuAngka7" to="OrangNgomong" method="_on_tombolo_ibu_angka_7_pressed"]
+[connection signal="pressed" from="control_Ibu_tanya/TomboloIbuAngka8" to="OrangNgomong" method="_on_tombolo_ibu_angka_8_pressed"]
+[connection signal="pressed" from="control_Ibu_tanya/TomboloIbuAngka9" to="OrangNgomong" method="_on_tombolo_ibu_angka_9_pressed"]
+[connection signal="pressed" from="control_Ibu_tanya/TomboloIbuAngka0" to="OrangNgomong" method="_on_tombolo_ibu_angka_0_pressed"]
+[connection signal="pressed" from="control_Ibu_tanya/TomboloIbu_buah1" to="OrangNgomong" method="_on_tombolo_ibu_buah_1_pressed"]
+[connection signal="pressed" from="control_Ibu_tanya/TomboloIbu_buah2" to="OrangNgomong" method="_on_tombolo_ibu_buah_2_pressed"]
+[connection signal="pressed" from="control_Ibu_tanya/TomboloIbu_buah3" to="OrangNgomong" method="_on_tombolo_ibu_buah_3_pressed"]
+[connection signal="pressed" from="control_Ibu_tanya/TomboloIbu_buah4" to="OrangNgomong" method="_on_tombolo_ibu_buah_4_pressed"]

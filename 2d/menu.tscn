@@ -1,0 +1,202 @@
+[gd_scene load_steps=13 format=3 uid="uid://5gtc8uiu028y"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_nsk4r"]
+[ext_resource type="Texture2D" uid="uid://bdd5nhnjx6wy2" path="res://img/782.jpg" id="2_3pkpy"]
+[ext_resource type="Theme" uid="uid://cb21ut3dnxurk" path="res://tres/tombol.tres" id="3_iuuyy"]
+[ext_resource type="Texture2D" uid="uid://c1aycl730n8eu" path="res://img/aset/game_2/SOAL/belakang_2.png" id="3_ojm5a"]
+[ext_resource type="SystemFont" uid="uid://ccndfb05mlrvo" path="res://tres/Font_tombol.tres" id="4_i1p8f"]
+[ext_resource type="Theme" uid="uid://e6xhwpqmlsde" path="res://tres/tombol_menu.tres" id="4_rbitp"]
+[ext_resource type="Texture2D" uid="uid://deaakdnln8f4d" path="res://img/aset/benar.png" id="6_s06w3"]
+[ext_resource type="Texture2D" uid="uid://bx5m6iugmyv7t" path="res://img/aset/coba_lagi.png" id="7_gb44l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8b0m"]
+bg_color = Color(0.321101, 0.333757, 0.35712, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.233926, 0.233925, 0.233925, 1)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_size = 4
+shadow_offset = Vector2(3, 0)
+
+[sub_resource type="Theme" id="Theme_6ylf2"]
+Button/styles/normal = SubResource("StyleBoxFlat_o8b0m")
+
+[sub_resource type="SystemFont" id="SystemFont_udihu"]
+font_names = PackedStringArray("Pixellari")
+
+[sub_resource type="SystemFont" id="SystemFont_jpsur"]
+font_names = PackedStringArray("Pixellari")
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nsk4r")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+self_modulate = Color(0.741385, 0.741384, 0.741384, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -1.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3pkpy")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+self_modulate = Color(0.881937, 0.881936, 0.881936, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -1.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_ojm5a")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_constants/separation = 45
+
+[node name="Seperator6" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Seperator6"]
+layout_mode = 2
+offset_left = 3.0
+offset_top = 62.0
+offset_right = 1283.0
+offset_bottom = 213.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("4_i1p8f")
+theme_override_font_sizes/font_size = 150
+text = "TOFUW"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="Seperator4" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Seperator6" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Seperator7" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Seperator8" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Seperator9" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Seperator10" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Seperator11" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Seperator12" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Seperator13" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Pencetan" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_6ylf2")
+
+[node name="Start" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/Pencetan"]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+offset_left = -118.0
+offset_top = -117.0
+offset_right = 122.0
+offset_bottom = -37.0
+theme = ExtResource("3_iuuyy")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_udihu")
+theme_override_font_sizes/font_size = 47
+text = "Mulai"
+icon_alignment = 1
+
+[node name="Options" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/Pencetan"]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+offset_left = -117.0
+offset_top = 5.0
+offset_right = 123.0
+offset_bottom = 85.0
+theme = ExtResource("3_iuuyy")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_jpsur")
+theme_override_font_sizes/font_size = 38
+text = "Pengaturan"
+icon_alignment = 1
+
+[node name="Quit" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/Pencetan"]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+offset_left = -117.0
+offset_top = 132.0
+offset_right = 123.0
+offset_bottom = 212.0
+theme = ExtResource("4_rbitp")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_jpsur")
+theme_override_font_sizes/font_size = 40
+text = "Keluar"
+icon_alignment = 1
+
+[node name="Benar" type="Sprite2D" parent="."]
+position = Vector2(237, 544)
+scale = Vector2(0.348148, 0.348148)
+texture = ExtResource("6_s06w3")
+
+[node name="CobaLagi" type="Sprite2D" parent="."]
+position = Vector2(1101, 546)
+scale = Vector2(0.259259, 0.259259)
+texture = ExtResource("7_gb44l")
+flip_h = true
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Pencetan/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Pencetan/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Pencetan/Quit" to="." method="_on_quit_pressed"]

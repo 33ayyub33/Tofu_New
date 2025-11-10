@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dr77fqceborv8"
+path="res://.godot/imported/Joy To The World - DJ Williams.mp3-6b556a765a6bee9ef511ea02b8c372f1.mp3str"
+
+[deps]
+
+source_file="res://img/Joy To The World - DJ Williams.mp3"
+dest_files=["res://.godot/imported/Joy To The World - DJ Williams.mp3-6b556a765a6bee9ef511ea02b8c372f1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

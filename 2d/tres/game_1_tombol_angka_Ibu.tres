@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://bslehmcih0spr"]
+
+[ext_resource type="Texture2D" uid="uid://qawdkpwvo1ag" path="res://img/aset/game_1/tombolo_ibu_angka.png" id="1_h0wvd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vm1ds"]
+texture = ExtResource("1_h0wvd")
+modulate_color = Color(0.91664, 0.91664, 0.91664, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3advx"]
+texture = ExtResource("1_h0wvd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_obsso"]
+texture = ExtResource("1_h0wvd")
+modulate_color = Color(0.712129, 0.712129, 0.712129, 1)
+
+[resource]
+Button/styles/hover = SubResource("StyleBoxTexture_vm1ds")
+Button/styles/normal = SubResource("StyleBoxTexture_3advx")
+Button/styles/pressed = SubResource("StyleBoxTexture_obsso")

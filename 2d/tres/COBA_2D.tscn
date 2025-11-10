@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6agehgpw6hgc"]
+
+[ext_resource type="Script" path="res://coba_node2d.gd" id="1_6fvr4"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_6fvr4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
